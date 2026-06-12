@@ -1,12 +1,30 @@
 # Recipe Journal
 
-A simple, polished recipe collection site that is easy to maintain and completely free to use.
+A polished recipe blog that is simple to maintain, easy to browse, and free to host on GitHub Pages.
 
-## How it works
+## What it does
 
-- Recipes are stored in [data/recipes.json](data/recipes.json).
-- Add a new recipe by inserting a new object with a title, description, category, tags, and either a source URL or a simple text note.
-- The site automatically displays the recipe with search and filtering.
+- Shows recipes as a simple blog-style collection.
+- Supports instant search and category filtering.
+- Lets you add a new recipe by linking to a website in [data/recipes.json](data/recipes.json).
+- Works well on phones, tablets, and desktops without any backend.
+
+## Add a recipe
+
+Open [data/recipes.json](data/recipes.json) and add one more object like this:
+
+```json
+{
+  "title": "Your recipe title",
+  "description": "A short description",
+  "category": "Dinner",
+  "time": "25 min",
+  "tags": ["quick", "family"],
+  "url": "https://example.com/your-recipe"
+}
+```
+
+A recipe can also be added without a URL by using the `text` field instead.
 
 ## Run locally
 
@@ -18,6 +36,15 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
-## Share it
+## Publish to GitHub Pages
 
-You can publish this folder to GitHub Pages, Netlify, or any other static hosting service at no cost.
+1. Push this folder to a GitHub repository.
+2. Open the repository settings.
+3. Go to Pages and choose Deploy from a branch.
+4. Select the main branch and the root folder, then save.
+
+The site will be available at a GitHub Pages URL for the repository.
+
+## Shared use
+
+Because the content lives in a plain JSON file, multiple people can contribute by editing the same repository and sharing the same published page.

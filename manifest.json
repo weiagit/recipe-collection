@@ -1,0 +1,9 @@
+{
+  "name": "Recipe Journal",
+  "short_name": "Recipe Journal",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff8ef",
+  "theme_color": "#d96b3d",
+  "description": "A simple recipe collection with search, filtering, and easy additions."
+}

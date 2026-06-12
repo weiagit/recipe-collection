@@ -7,23 +7,36 @@
       name="description"
       content="A beautiful, shareable recipe collection that is easy to maintain."
     />
+    <meta name="theme-color" content="#d96b3d" />
     <title>Recipe Journal</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <div class="page-shell">
       <header class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Gathered for busy kitchens</p>
-          <h1>Recipe Journal</h1>
+          <p class="eyebrow">Shared recipe journal</p>
+          <h1>Recipe blog, built for easy sharing</h1>
           <p class="hero-text">
-            A cozy collection of favorite recipes that is simple to maintain, easy to share,
-            and delightful to browse from any device. It is completely free to use and can be
-            hosted at no cost on services like GitHub Pages.
+            Browse favorites, search by mood or ingredient, and add a new recipe in minutes by
+            linking to a website. The collection works beautifully across phones, tablets, and
+            desktops and can be shared from one GitHub repository.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#recipes">Browse recipes</a>
             <a class="button secondary" href="#add-recipe">How to add one</a>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Why this setup works well">
+          <div class="hero-panel-card">
+            <p class="panel-label">Why it works</p>
+            <ul>
+              <li>Search and filter without a backend</li>
+              <li>New recipes are just one link in a JSON file</li>
+              <li>GitHub Pages keeps it free and simple to share</li>
+            </ul>
           </div>
         </div>
       </header>
@@ -31,7 +44,7 @@
       <main id="recipes">
         <section class="toolbar" aria-label="Recipe filters">
           <label class="search-box" for="searchInput">
-            <span>🔎</span>
+            <span aria-hidden="true">🔎</span>
             <input
               id="searchInput"
               type="search"
@@ -40,14 +53,7 @@
             />
           </label>
 
-          <div class="filter-group" role="tablist" aria-label="Recipe categories">
-            <button class="filter-chip active" data-category="All">All</button>
-            <button class="filter-chip" data-category="Breakfast">Breakfast</button>
-            <button class="filter-chip" data-category="Lunch">Lunch</button>
-            <button class="filter-chip" data-category="Dinner">Dinner</button>
-            <button class="filter-chip" data-category="Dessert">Dessert</button>
-            <button class="filter-chip" data-category="Snack">Snack</button>
-          </div>
+          <div class="filter-group" role="tablist" aria-label="Recipe categories"></div>
         </section>
 
         <section class="results-bar" aria-live="polite">
@@ -57,14 +63,36 @@
         <section id="recipeGrid" class="recipe-grid" aria-live="polite"></section>
       </main>
 
-      <section id="add-recipe" class="info-card">
-        <h2>Keeping it easy to maintain</h2>
-        <p>
-          Add a new recipe by opening the recipe data file and inserting one more recipe link.
-          The site will automatically show it with search and filtering. It stays free because
-          it is built as a simple static website that can be hosted without a paid backend.
-        </p>
-        <code>data/recipes.json</code>
+      <section id="add-recipe" class="info-grid" aria-label="How to add recipes">
+        <article class="info-card">
+          <h2>Adding a recipe is delightfully simple</h2>
+          <p>
+            Open <code>data/recipes.json</code>, copy one recipe object, and replace the values
+            with a new title, description, category, tags, and the recipe URL. The site will
+            show it instantly after refresh.
+          </p>
+          <pre class="code-block">{
+  "title": "Your recipe title",
+  "description": "A short description",
+  "category": "Dinner",
+  "time": "25 min",
+  "tags": ["quick", "family"],
+  "url": "https://example.com/your-recipe"
+}</pre>
+        </article>
+
+        <article class="info-card">
+          <h2>Ready for shared use</h2>
+          <p>
+            This project is designed for a small team or family to keep in one shared GitHub
+            repository. Everyone can add recipes, and the site stays lightweight and mobile-friendly.
+          </p>
+          <ul class="step-list">
+            <li>Open the repo on GitHub and edit the recipe data file.</li>
+            <li>Commit the change and publish it to GitHub Pages.</li>
+            <li>Anyone with the link can browse it from any device.</li>
+          </ul>
+        </article>
       </section>
     </div>
 

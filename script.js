@@ -7,17 +7,56 @@ const state = {
 const recipeGrid = document.getElementById("recipeGrid");
 const resultsCount = document.getElementById("resultsCount");
 const searchInput = document.getElementById("searchInput");
-const filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
+const filterGroup = document.querySelector(".filter-group");
+let filterButtons = [];
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 async function loadRecipes() {
   try {
     const response = await fetch("./data/recipes.json");
     if (!response.ok) throw new Error("Unable to load recipes");
     state.recipes = await response.json();
+    buildCategoryFilters();
     renderRecipes();
   } catch (error) {
-    recipeGrid.innerHTML = `<div class="empty-state">${error.message}</div>`;
+    recipeGrid.innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
     resultsCount.textContent = "Recipes could not be loaded.";
+  }
+}
+
+function buildCategoryFilters() {
+  const categories = [...new Set(state.recipes.map((recipe) => recipe.category).filter(Boolean))].sort();
+
+  filterGroup.innerHTML = [
+    '<button class="filter-chip active" data-category="All">All</button>',
+    ...categories.map(
+      (category) => `<button class="filter-chip" data-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`
+    ),
+  ].join("");
+
+  filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach((chip) => chip.classList.remove("active"));
+      button.classList.add("active");
+      state.category = button.dataset.category;
+      renderRecipes();
+    });
+  });
+
+  const activeButton = filterButtons.find((button) => button.dataset.category === state.category);
+  if (activeButton) {
+    filterButtons.forEach((chip) => chip.classList.remove("active"));
+    activeButton.classList.add("active");
   }
 }
 
@@ -46,41 +85,37 @@ function renderRecipes() {
   }
 
   recipeGrid.innerHTML = filtered
-    .map(
-      (recipe) => `
+    .map((recipe) => {
+      const title = escapeHtml(recipe.title || "Untitled recipe");
+      const description = escapeHtml(recipe.description || "A simple favorite to keep nearby.");
+      const category = escapeHtml(recipe.category || "Other");
+      const time = escapeHtml(recipe.time || "Any time");
+      const tags = (recipe.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+      const note = escapeHtml(recipe.text || "Recipe notes shared here.");
+
+      return `
         <article class="recipe-card">
           <div class="meta-row">
-            <span class="badge">${recipe.category}</span>
-            <span>${recipe.time}</span>
+            <span class="badge">${category}</span>
+            <span>${time}</span>
           </div>
-          <h3>${recipe.title}</h3>
-          <p>${recipe.description}</p>
-          <div class="tag-list">
-            ${(recipe.tags || []).map((tag) => `<span>${tag}</span>`).join("")}
-          </div>
+          <h3>${title}</h3>
+          <p>${description}</p>
+          <div class="tag-list">${tags}</div>
           ${
             recipe.url
-              ? `<a class="recipe-link" href="${recipe.url}" target="_blank" rel="noreferrer">View recipe →</a>`
-              : `<p class="recipe-note">${recipe.text || "Recipe notes shared here."}</p>`
+              ? `<a class="recipe-link" href="${escapeHtml(recipe.url)}" target="_blank" rel="noreferrer">View recipe →</a>`
+              : `<p class="recipe-note">${note}</p>`
           }
         </article>
-      `
-    )
+      `;
+    })
     .join("");
 }
 
 searchInput.addEventListener("input", (event) => {
   state.search = event.target.value.trim();
   renderRecipes();
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    filterButtons.forEach((chip) => chip.classList.remove("active"));
-    button.classList.add("active");
-    state.category = button.dataset.category;
-    renderRecipes();
-  });
 });
 
 loadRecipes();
