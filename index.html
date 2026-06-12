@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A beautiful, shareable recipe collection that is easy to maintain."
+    />
+    <title>Recipe Journal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Gathered for busy kitchens</p>
+          <h1>Recipe Journal</h1>
+          <p class="hero-text">
+            A cozy collection of favorite recipes that is simple to maintain, easy to share,
+            and delightful to browse from any device. It is completely free to use and can be
+            hosted at no cost on services like GitHub Pages.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#recipes">Browse recipes</a>
+            <a class="button secondary" href="#add-recipe">How to add one</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="recipes">
+        <section class="toolbar" aria-label="Recipe filters">
+          <label class="search-box" for="searchInput">
+            <span>🔎</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search recipes, ingredients, or moods"
+              autocomplete="off"
+            />
+          </label>
+
+          <div class="filter-group" role="tablist" aria-label="Recipe categories">
+            <button class="filter-chip active" data-category="All">All</button>
+            <button class="filter-chip" data-category="Breakfast">Breakfast</button>
+            <button class="filter-chip" data-category="Lunch">Lunch</button>
+            <button class="filter-chip" data-category="Dinner">Dinner</button>
+            <button class="filter-chip" data-category="Dessert">Dessert</button>
+            <button class="filter-chip" data-category="Snack">Snack</button>
+          </div>
+        </section>
+
+        <section class="results-bar" aria-live="polite">
+          <p id="resultsCount">Loading recipes...</p>
+        </section>
+
+        <section id="recipeGrid" class="recipe-grid" aria-live="polite"></section>
+      </main>
+
+      <section id="add-recipe" class="info-card">
+        <h2>Keeping it easy to maintain</h2>
+        <p>
+          Add a new recipe by opening the recipe data file and inserting one more recipe link.
+          The site will automatically show it with search and filtering. It stays free because
+          it is built as a simple static website that can be hosted without a paid backend.
+        </p>
+        <code>data/recipes.json</code>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

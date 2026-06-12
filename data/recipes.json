@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Cinnamon Maple Oatmeal",
+    "description": "A warm, cozy breakfast bowl with fruit and crunchy nuts for a slow morning.",
+    "category": "Breakfast",
+    "time": "10 min",
+    "tags": ["quick", "make-ahead", "fruit"],
+    "url": "https://www.example.com/recipes/cinnamon-maple-oatmeal"
+  },
+  {
+    "title": "Garden Chickpea Wraps",
+    "description": "Bright lunch wraps packed with herbs, crunchy vegetables, and a creamy spread.",
+    "category": "Lunch",
+    "time": "15 min",
+    "tags": ["fresh", "vegetarian", "meal-prep"],
+    "url": "https://www.example.com/recipes/garden-chickpea-wraps"
+  },
+  {
+    "title": "Sheet Pan Lemon Chicken",
+    "description": "A simple dinner with roasted potatoes, green beans, and citrusy chicken.",
+    "category": "Dinner",
+    "time": "35 min",
+    "tags": ["family", "one-pan", "comfort"],
+    "url": "https://www.example.com/recipes/sheet-pan-lemon-chicken"
+  },
+  {
+    "title": "Berry Yogurt Parfaits",
+    "description": "Layered yogurt parfaits with berries, granola, and a hint of honey.",
+    "category": "Dessert",
+    "time": "8 min",
+    "tags": ["no-bake", "fresh", "sweet"],
+    "url": "https://www.example.com/recipes/berry-yogurt-parfaits"
+  },
+  {
+    "title": "Roasted Tomato Hummus",
+    "description": "Smoky roasted tomato hummus for dipping, toasts, and snack plates.",
+    "category": "Snack",
+    "time": "20 min",
+    "tags": ["dip", "vegetarian", "party"],
+    "url": "https://www.example.com/recipes/roasted-tomato-hummus"
+  },
+  {
+    "title": "Herbed Tomato Couscous",
+    "description": "A quick pantry lunch with herbs, tomatoes, and olive oil.",
+    "category": "Lunch",
+    "time": "20 min",
+    "tags": ["quick", "vegetarian", "pantry"],
+    "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
+  }
+]

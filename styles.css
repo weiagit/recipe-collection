@@ -1,0 +1,269 @@
+:root {
+  color-scheme: light;
+  --bg: #fff8ef;
+  --panel: #ffffff;
+  --text: #2d241f;
+  --muted: #6f5f54;
+  --accent: #d96b3d;
+  --accent-soft: #ffe4d6;
+  --border: #f0d8c7;
+  --shadow: 0 16px 40px rgba(45, 36, 31, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #fff8ef 0%, #fff3e8 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fff 0%, #fff2e6 100%);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 12px;
+}
+
+.hero-text {
+  max-width: 680px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+
+.button.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.button.secondary {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.toolbar {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-chip {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-chip.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.results-bar {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recipe-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.recipe-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #f5efe8;
+  color: #855d4b;
+  font-size: 0.8rem;
+}
+
+.recipe-link {
+  margin-top: auto;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.recipe-note {
+  margin-top: auto;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f8efe6;
+  color: #8b4f2d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.info-card {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.info-card h2 {
+  margin-top: 0;
+}
+
+.info-card code {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f8efe6;
+  color: #8b4f2d;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: 22px;
+  background: rgba(255,255,255,0.65);
+}
+
+@media (max-width: 900px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 24px;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}

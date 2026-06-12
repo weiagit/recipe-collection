@@ -1,0 +1,27 @@
+If you host it on GitHub Pages, the workflow is very straightforward:
+
+Put the project in a GitHub repository
+
+Create a repo and upload these files:
+index.html
+styles.css
+script.js
+recipes.json
+Enable GitHub Pages
+
+In GitHub, open the repo settings
+Go to Pages
+Choose the main branch as the source
+Your site goes live
+
+GitHub Pages will give you a URL like:
+https://yourusername.github.io/your-repo-name/
+Add recipes later
+
+Edit recipes.json
+Commit and push the change
+GitHub Pages updates the site automatically
+Share the link
+
+Send the GitHub Pages URL to others
+They can browse, search, and click through to the recipes
