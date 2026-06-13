@@ -137,10 +137,12 @@ function renderRecipes() {
   recipeGrid.innerHTML = filtered
     .map((recipe) => {
       const title = escapeHtml(recipe.title || "Untitled recipe");
-      const description = escapeHtml(recipe.description || "A simple favorite to keep nearby.");
+      const description = escapeHtml(recipe.description || "").trim();
+      const descriptionMarkup = description ? `<p>${description}</p>` : "";
       const category = escapeHtml(recipe.category || "Other");
       const categoryClass = state.categories.includes(recipe.category) ? " active" : "";
-      const time = escapeHtml(recipe.time || "? min");
+      const timeValue = String(recipe.time || "").trim();
+      const timeMarkup = timeValue ? `<span>${escapeHtml(timeValue)}</span>` : "";
       const imageUrl = escapeHtml(recipe.image || recipe.imageUrl || "");
       const imageMarkup = imageUrl
         ? `<img class="recipe-image" src="${imageUrl}" alt="${title}" loading="lazy" />`
@@ -167,12 +169,16 @@ function renderRecipes() {
         <article class="recipe-card">
           <div class="meta-row">
             <button class="badge category-badge${categoryClass}" type="button" data-category="${escapeHtml(recipe.category || "Other")}">${category}</button>
-            <span>${time}</span>
+            ${timeMarkup}
           </div>
-          ${imageMarkup}
+          <div class="recipe-hero">
+            ${imageMarkup ? `<div class="recipe-media">${imageMarkup}</div>` : ""}
+            <div class="recipe-title-block">
+              <h3>${title}</h3>
+            </div>
+          </div>
+          ${descriptionMarkup}
           <div class="tag-list">${tags}</div>
-          <h3>${title}</h3>
-          <p>${description}</p>
           ${actionMarkup || noteButtonMarkup ? `<div class="recipe-actions">${actionMarkup}${noteButtonMarkup}</div>` : ""}
           ${noteMarkup}
         </article>

@@ -307,12 +307,30 @@ img {
   margin-bottom: 2px;
 }
 
+.recipe-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.recipe-media {
+  flex: 0 0 110px;
+}
+
 .recipe-image {
-  width: 100%;
-  height: 170px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid var(--border);
+}
+
+.recipe-title-block {
+  min-width: 0;
+}
+
+.recipe-title-block h3 {
+  line-height: 1.3;
 }
 
 .recipe-actions {
