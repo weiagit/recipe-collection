@@ -9,7 +9,18 @@ const recipeGrid = document.getElementById("recipeGrid");
 const resultsCount = document.getElementById("resultsCount");
 const searchInput = document.getElementById("searchInput");
 const filterGroup = document.querySelector(".filter-group");
+const toolbar = document.querySelector(".toolbar");
 let filterButtons = [];
+
+function getTagStyle(tag) {
+  const normalized = String(tag).toLowerCase();
+  if (normalized.includes("quick") || normalized.includes("easy") || normalized.includes("fresh")) return "tag-chip--teal";
+  if (normalized.includes("family") || normalized.includes("party") || normalized.includes("meal")) return "tag-chip--blue";
+  if (normalized.includes("sweet") || normalized.includes("fruit") || normalized.includes("vegetarian")) return "tag-chip--green";
+  if (normalized.includes("make") || normalized.includes("pantry") || normalized.includes("dip")) return "tag-chip--mint";
+  if (normalized.includes("comfort") || normalized.includes("warm") || normalized.includes("cozy")) return "tag-chip--yellow";
+  return "tag-chip--gray";
+}
 
 function escapeHtml(value) {
   return String(value)
@@ -26,6 +37,7 @@ async function loadRecipes() {
     if (!response.ok) throw new Error("Unable to load recipes");
     state.recipes = await response.json();
     buildCategoryFilters();
+    renderTagFilters();
     renderRecipes();
   } catch (error) {
     recipeGrid.innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
@@ -41,6 +53,7 @@ function buildCategoryFilters() {
     ...categories.map(
       (category) => `<button class="filter-chip" data-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`
     ),
+    '<button class="filter-chip" type="button" data-action="clear">Clear</button>',
   ].join("");
 
   filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
@@ -59,6 +72,30 @@ function buildCategoryFilters() {
     filterButtons.forEach((chip) => chip.classList.remove("active"));
     activeButton.classList.add("active");
   }
+}
+
+function renderTagFilters() {
+  const tags = [...new Set(state.recipes.flatMap((recipe) => recipe.tags || []))].sort();
+
+  const existingGroup = document.querySelector(".tag-group");
+  if (existingGroup) {
+    existingGroup.remove();
+  }
+
+  const tagGroup = document.createElement("div");
+  tagGroup.className = "tag-group";
+  tagGroup.setAttribute("aria-label", "Recipe tags");
+
+  tags.forEach((tag) => {
+    const button = document.createElement("button");
+    button.className = `tag-chip ${getTagStyle(tag)}${state.tag === tag ? " active" : ""}`;
+    button.type = "button";
+    button.dataset.tag = tag;
+    button.textContent = tag;
+    tagGroup.appendChild(button);
+  });
+
+  toolbar.insertBefore(tagGroup, filterGroup.nextSibling);
 }
 
 function renderRecipes() {
@@ -93,8 +130,8 @@ function renderRecipes() {
       const category = escapeHtml(recipe.category || "Other");
       const time = escapeHtml(recipe.time || "? min");
       const tags = (recipe.tags || [])
-        .map((tag, index) => {
-          const tagClass = `tag-pill tag-pill--${index % 6}`;
+        .map((tag) => {
+          const tagClass = getTagStyle(tag).replace("tag-chip", "tag-pill");
           const activeClass = state.tag === tag ? " active" : "";
           return `<button class="${tagClass}${activeClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
         })
@@ -126,12 +163,36 @@ searchInput.addEventListener("input", (event) => {
   renderRecipes();
 });
 
-recipeGrid.addEventListener("click", (event) => {
-  const button = event.target.closest(".tag-pill");
+filterGroup.addEventListener("click", (event) => {
+  const clearButton = event.target.closest("[data-action='clear']");
+  if (clearButton) {
+    state.search = "";
+    state.category = "All";
+    state.tag = "";
+    searchInput.value = "";
+    filterButtons.forEach((chip) => chip.classList.remove("active"));
+    filterGroup.querySelector(".filter-chip")?.classList.add("active");
+    renderTagFilters();
+    renderRecipes();
+    return;
+  }
+
+  const categoryButton = event.target.closest(".filter-chip");
+  if (!categoryButton) return;
+
+  filterButtons.forEach((chip) => chip.classList.remove("active"));
+  categoryButton.classList.add("active");
+  state.category = categoryButton.dataset.category;
+  renderRecipes();
+});
+
+toolbar.addEventListener("click", (event) => {
+  const button = event.target.closest(".tag-chip, .tag-pill");
   if (!button) return;
 
   const clickedTag = button.dataset.tag;
   state.tag = state.tag === clickedTag ? "" : clickedTag;
+  renderTagFilters();
   renderRecipes();
 });
 

@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --bg: #f4f7f8;
+  --bg: #f8f9f8;
   --panel: #ffffff;
   --text: #23363b;
   --muted: #64767a;
@@ -9,8 +9,9 @@
   --accent-alt: #6d95a2;
   --accent-green: #7c9b7c;
   --accent-gray: #88959a;
-  --border: #d8e3e2;
-  --shadow: 0 16px 40px rgba(90, 135, 128, 0.09);
+  --accent-yellow: #efe7b2;
+  --border: #e2e8e7;
+  --shadow: 0 16px 40px rgba(90, 135, 128, 0.08);
 }
 
 * {
@@ -20,7 +21,7 @@
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, #f7fbfb 0%, #eef5f6 100%);
+  background: linear-gradient(135deg, #fcfdfc 0%, #f4f7f7 100%);
   color: var(--text);
 }
 
@@ -39,7 +40,7 @@ img {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   gap: 20px;
-  background: linear-gradient(135deg, #fefefe 0%, #f0f6f7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7f7 100%);
   border: 1px solid var(--border);
   border-radius: 28px;
   padding: 40px;
@@ -146,13 +147,15 @@ img {
   background: transparent;
 }
 
-.filter-group {
+.filter-group,
+.tag-group {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.filter-chip {
+.filter-chip,
+.tag-chip {
   border: 1px solid var(--border);
   background: var(--panel);
   color: var(--muted);
@@ -162,10 +165,41 @@ img {
   font-weight: 600;
 }
 
-.filter-chip.active {
+.filter-chip.active,
+.tag-chip.active {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
+}
+
+.tag-chip--teal {
+  background: #e8f1ee;
+  color: #4f7a72;
+}
+
+.tag-chip--blue {
+  background: #e8eff5;
+  color: #5b7e8f;
+}
+
+.tag-chip--green {
+  background: #edf3e8;
+  color: #6f8468;
+}
+
+.tag-chip--gray {
+  background: #eceeef;
+  color: #6d7578;
+}
+
+.tag-chip--mint {
+  background: #eaf3f2;
+  color: #587b79;
+}
+
+.tag-chip--yellow {
+  background: var(--accent-yellow);
+  color: #6f6840;
 }
 
 .results-bar {
@@ -234,7 +268,7 @@ img {
 }
 
 .tag-pill {
-  border: none;
+  border: 1px solid var(--border);
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.8rem;
@@ -250,36 +284,6 @@ img {
 
 .tag-pill.active {
   box-shadow: inset 0 0 0 1px rgba(35, 54, 59, 0.12);
-}
-
-.tag-pill--0 {
-  background: #e8f1ee;
-  color: #4f7a72;
-}
-
-.tag-pill--1 {
-  background: #e8eff5;
-  color: #5b7e8f;
-}
-
-.tag-pill--2 {
-  background: #edf3e8;
-  color: #6f8468;
-}
-
-.tag-pill--3 {
-  background: #eceeef;
-  color: #6d7578;
-}
-
-.tag-pill--4 {
-  background: #eaf3f2;
-  color: #587b79;
-}
-
-.tag-pill--5 {
-  background: #e7eef2;
-  color: #617b85;
 }
 
 .recipe-link {
