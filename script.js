@@ -171,12 +171,8 @@ function renderRecipes() {
             <button class="badge category-badge${categoryClass}" type="button" data-category="${escapeHtml(recipe.category || "Other")}">${category}</button>
             ${timeMarkup}
           </div>
-          <div class="recipe-hero">
-            ${imageMarkup ? `<div class="recipe-media">${imageMarkup}</div>` : ""}
-            <div class="recipe-title-block">
-              <h3>${title}</h3>
-            </div>
-          </div>
+          ${imageMarkup ? `<div class="recipe-media">${imageMarkup}</div>` : ""}
+          <h3>${title}</h3>
           ${descriptionMarkup}
           <div class="tag-list">${tags}</div>
           ${actionMarkup || noteButtonMarkup ? `<div class="recipe-actions">${actionMarkup}${noteButtonMarkup}</div>` : ""}
