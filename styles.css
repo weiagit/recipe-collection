@@ -1,13 +1,13 @@
 :root {
   color-scheme: light;
-  --bg: #f2fdfb;
+  --bg: #f5fdfb;
   --panel: #ffffff;
-  --text: #123b3a;
-  --muted: #4f6f6b;
-  --accent: #0f766e;
-  --accent-soft: #d7f5f1;
-  --border: #bfe7e1;
-  --shadow: 0 16px 40px rgba(15, 118, 110, 0.12);
+  --text: #234b49;
+  --muted: #5d7773;
+  --accent: #4f8f8a;
+  --accent-soft: #e4f3ef;
+  --border: #d4e8e3;
+  --shadow: 0 16px 40px rgba(79, 143, 138, 0.1);
 }
 
 * {
@@ -17,7 +17,7 @@
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, #f2fdfb 0%, #e7f9f6 100%);
+  background: linear-gradient(135deg, #f9fefc 0%, #f2faf7 100%);
   color: var(--text);
 }
 
@@ -36,7 +36,7 @@ img {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   gap: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #e8f8f5 100%);
+  background: linear-gradient(135deg, #fefefe 0%, #f3faf7 100%);
   border: 1px solid var(--border);
   border-radius: 28px;
   padding: 40px;
@@ -190,7 +190,7 @@ img {
 
 .recipe-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 44px rgba(15, 118, 110, 0.12);
+  box-shadow: 0 20px 44px rgba(79, 143, 138, 0.1);
 }
 
 .recipe-card h3 {
@@ -232,8 +232,8 @@ img {
 .tag-list span {
   padding: 5px 9px;
   border-radius: 999px;
-  background: #eaf8f6;
-  color: #2f6f69;
+  background: #edf7f5;
+  color: #567d78;
   font-size: 0.8rem;
 }
 
@@ -248,8 +248,8 @@ img {
   margin-top: auto;
   padding: 10px 12px;
   border-radius: 12px;
-  background: #e7f8f5;
-  color: #256e67;
+  background: #edf7f5;
+  color: #567d78;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -278,8 +278,8 @@ img {
   margin-top: 8px;
   padding: 8px 10px;
   border-radius: 10px;
-  background: #e7f8f5;
-  color: #256e67;
+  background: #edf7f5;
+  color: #567d78;
 }
 
 .code-block {
@@ -287,8 +287,8 @@ img {
   padding: 14px;
   overflow-x: auto;
   border-radius: 14px;
-  background: #0f3d3a;
-  color: #f2fdfb;
+  background: #213f3c;
+  color: #f5fdfb;
   line-height: 1.5;
 }
 
