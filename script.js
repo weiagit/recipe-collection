@@ -1,6 +1,6 @@
 const state = {
   search: "",
-  category: "All",
+  categories: [],
   tags: [],
   recipes: [],
 };
@@ -45,6 +45,35 @@ async function loadRecipes() {
   }
 }
 
+function syncCategoryButtonState() {
+  filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
+  filterButtons.forEach((chip) => {
+    const isAllButton = chip.dataset.category === "All";
+    const isSelected = chip.dataset.category !== "All" && state.categories.includes(chip.dataset.category);
+    chip.classList.toggle("active", isAllButton ? !state.categories.length : isSelected);
+  });
+}
+
+function toggleCategoryFilter(category) {
+  if (category === "All") {
+    state.categories = [];
+  } else if (state.categories.includes(category)) {
+    state.categories = state.categories.filter((selectedCategory) => selectedCategory !== category);
+  } else {
+    state.categories = [...state.categories, category];
+  }
+
+  syncCategoryButtonState();
+  renderRecipes();
+}
+
+function pressClearButton() {
+  const clearButton = filterGroup.querySelector("[data-action='clear']");
+  if (!clearButton) return;
+  clearButton.classList.add("is-pressed");
+  window.setTimeout(() => clearButton.classList.remove("is-pressed"), 160);
+}
+
 function buildCategoryFilters() {
   const categories = [...new Set(state.recipes.map((recipe) => recipe.category).filter(Boolean))].sort();
 
@@ -57,21 +86,7 @@ function buildCategoryFilters() {
   ].join("");
 
   filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      filterButtons.forEach((chip) => chip.classList.remove("active"));
-      button.classList.add("active");
-      state.category = button.dataset.category;
-      renderRecipes();
-    });
-  });
-
-  const activeButton = filterButtons.find((button) => button.dataset.category === state.category);
-  if (activeButton) {
-    filterButtons.forEach((chip) => chip.classList.remove("active"));
-    activeButton.classList.add("active");
-  }
+  syncCategoryButtonState();
 }
 
 function renderTagFilters() {
@@ -111,7 +126,7 @@ function renderRecipes() {
       .toLowerCase();
 
     const matchesSearch = searchText.includes(state.search.toLowerCase());
-    const matchesCategory = state.category === "All" || recipe.category === state.category;
+    const matchesCategory = !state.categories.length || state.categories.includes(recipe.category);
     const matchesTag = !state.tags.length || state.tags.every((selectedTag) => (recipe.tags || []).includes(selectedTag));
     return matchesSearch && matchesCategory && matchesTag;
   });
@@ -128,6 +143,7 @@ function renderRecipes() {
       const title = escapeHtml(recipe.title || "Untitled recipe");
       const description = escapeHtml(recipe.description || "A simple favorite to keep nearby.");
       const category = escapeHtml(recipe.category || "Other");
+      const categoryClass = state.categories.includes(recipe.category) ? " active" : "";
       const time = escapeHtml(recipe.time || "? min");
       const tags = (recipe.tags || [])
         .map((tag) => {
@@ -141,7 +157,7 @@ function renderRecipes() {
       return `
         <article class="recipe-card">
           <div class="meta-row">
-            <span class="badge">${category}</span>
+            <button class="badge category-badge${categoryClass}" type="button" data-category="${escapeHtml(recipe.category || "Other")}">${category}</button>
             <span>${time}</span>
           </div>
           <div class="tag-list">${tags}</div>
@@ -167,27 +183,42 @@ filterGroup.addEventListener("click", (event) => {
   const clearButton = event.target.closest("[data-action='clear']");
   if (clearButton) {
     state.search = "";
-    state.category = "All";
+    state.categories = [];
     state.tags = [];
     searchInput.value = "";
-    filterButtons.forEach((chip) => chip.classList.remove("active"));
-    filterGroup.querySelector(".filter-chip")?.classList.add("active");
+    syncCategoryButtonState();
+    pressClearButton();
     renderTagFilters();
     renderRecipes();
     return;
   }
 
   const categoryButton = event.target.closest(".filter-chip");
-  if (!categoryButton) return;
+  if (!categoryButton || categoryButton.dataset.action === "clear") return;
 
-  filterButtons.forEach((chip) => chip.classList.remove("active"));
-  categoryButton.classList.add("active");
-  state.category = categoryButton.dataset.category;
+  toggleCategoryFilter(categoryButton.dataset.category);
+});
+
+recipeGrid.addEventListener("click", (event) => {
+  const categoryButton = event.target.closest(".category-badge");
+  if (categoryButton) {
+    toggleCategoryFilter(categoryButton.dataset.category);
+    return;
+  }
+
+  const tagButton = event.target.closest(".tag-pill");
+  if (!tagButton) return;
+
+  const clickedTag = tagButton.dataset.tag;
+  state.tags = state.tags.includes(clickedTag)
+    ? state.tags.filter((tag) => tag !== clickedTag)
+    : [...state.tags, clickedTag];
+  renderTagFilters();
   renderRecipes();
 });
 
 toolbar.addEventListener("click", (event) => {
-  const button = event.target.closest(".tag-chip, .tag-pill");
+  const button = event.target.closest(".tag-chip");
   if (!button) return;
 
   const clickedTag = button.dataset.tag;
