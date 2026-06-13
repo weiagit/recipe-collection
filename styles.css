@@ -172,9 +172,9 @@ img {
 }
 
 .filter-chip.clear-button {
-  background: #f7efe0;
-  color: #846f46;
-  border-color: #e4d1aa;
+  background: var(--accent-soft);
+  color: var(--accent);
+  /* border-color: var(--accent-soft); */
 }
 
 .filter-chip.clear-button:hover {
@@ -464,6 +464,27 @@ img {
   border-radius: 22px;
   background: rgba(255,255,255,0.65);
 }
+
+/* Unvisited link */
+a:link {
+  color: #6d95a2; 
+}
+
+/* Visited link */
+a:visited {
+  color: #6d95a2;
+}
+
+/* Mouse over link */
+a:hover {
+  color: #6d95a2;
+}
+
+/* Selected/Clicked link */
+a:active {
+  color: #6d95a2;
+}
+
 
 @media (max-width: 900px) {
   .hero {
