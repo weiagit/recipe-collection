@@ -16,13 +16,11 @@
     <div class="page-shell">
       <header class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Shared recipe journal</p>
-          <h1>Recipe blog, built for easy sharing</h1>
-          <p class="hero-text">
-            Browse favorites, search by mood or ingredient, and add a new recipe in minutes by
-            linking to a website. The collection works beautifully across phones, tablets, and
-            desktops and can be shared from one GitHub repository.
-          </p>
+          <p class="eyebrow">Shared recipes</p>
+          <h1>Recipe Collection</h1>
+          <!-- <p class="hero-text">
+            A collection of our favorite recipes.
+          </p> -->
           <div class="hero-actions">
             <a class="button primary" href="#recipes">Browse recipes</a>
             <a class="button secondary" href="#add-recipe">How to add one</a>
@@ -31,11 +29,11 @@
 
         <div class="hero-panel" aria-label="Why this setup works well">
           <div class="hero-panel-card">
-            <p class="panel-label">Why it works</p>
+            <p class="panel-label">Setup</p>
             <ul>
-              <li>Search and filter without a backend</li>
-              <li>New recipes are just one link in a JSON file</li>
-              <li>GitHub Pages keeps it free and simple to share</li>
+              <li>Search and filter recipes</li>
+              <li>Add new recipes in a JSON file</li>
+              <!-- <li>GitHub Pages keeps it free and simple to share</li> -->
             </ul>
           </div>
         </div>
@@ -48,7 +46,7 @@
             <input
               id="searchInput"
               type="search"
-              placeholder="Search recipes, ingredients, or moods"
+              placeholder="Search recipes, ingredients, tags, or categories"
               autocomplete="off"
             />
           </label>
@@ -65,11 +63,12 @@
 
       <section id="add-recipe" class="info-grid" aria-label="How to add recipes">
         <article class="info-card">
-          <h2>Adding a recipe is delightfully simple</h2>
+          <h2>Adding a recipe</h2>
           <p>
             Open <code>data/recipes.json</code>, copy one recipe object, and replace the values
-            with a new title, description, category, tags, and the recipe URL. The site will
-            show it instantly after refresh.
+            with a new title, description, category, tags, and the recipe URL.
+          </p>
+          <p>If there is no URL, you can add the recipe details in the <code>text</code> field instead.
           </p>
           <pre class="code-block">{
   "title": "Your recipe title",
