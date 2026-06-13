@@ -78,7 +78,7 @@ function buildCategoryFilters() {
     ...categories.map(
       (category) => `<button class="filter-chip" data-category="${escapeHtml(category)}">${escapeHtml(category)}</button>`
     ),
-    '<button class="filter-chip" type="button" data-action="clear">Clear</button>',
+    '<button class="filter-chip clear-button" type="button" data-action="clear">Clear</button>',
   ].join("");
 
   filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
@@ -141,6 +141,21 @@ function renderRecipes() {
       const category = escapeHtml(recipe.category || "Other");
       const categoryClass = state.categories.includes(recipe.category) ? " active" : "";
       const time = escapeHtml(recipe.time || "? min");
+      const imageUrl = escapeHtml(recipe.image || recipe.imageUrl || "");
+      const imageMarkup = imageUrl
+        ? `<img class="recipe-image" src="${imageUrl}" alt="${title}" loading="lazy" />`
+        : "";
+      const noteText = String(recipe.text || "").trim();
+      const hasText = Boolean(noteText);
+      const actionMarkup = recipe.url
+        ? `<a class="recipe-link" href="${escapeHtml(recipe.url)}" target="_blank" rel="noreferrer">View recipe →</a>`
+        : "";
+      const noteButtonMarkup = hasText
+        ? `<button class="recipe-toggle" type="button" data-action="toggle-note">View recipe</button>`
+        : "";
+      const noteMarkup = hasText
+        ? `<div class="recipe-note-panel"><div class="recipe-note-content">${escapeHtml(noteText).replace(/\n/g, "<br>")}</div></div>`
+        : "";
       const tags = (recipe.tags || [])
         .map((tag) => {
           const tagClass = getTagStyle(tag).replace("tag-chip", "tag-pill");
@@ -148,22 +163,18 @@ function renderRecipes() {
           return `<button class="tag-pill ${tagClass}${activeClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
         })
         .join("");
-      const note = escapeHtml(recipe.text || "Recipe notes shared here.");
-
       return `
         <article class="recipe-card">
           <div class="meta-row">
             <button class="badge category-badge${categoryClass}" type="button" data-category="${escapeHtml(recipe.category || "Other")}">${category}</button>
             <span>${time}</span>
           </div>
+          ${imageMarkup}
           <div class="tag-list">${tags}</div>
           <h3>${title}</h3>
           <p>${description}</p>
-          ${
-            recipe.url
-              ? `<a class="recipe-link" href="${escapeHtml(recipe.url)}" target="_blank" rel="noreferrer">View recipe →</a>`
-              : `<p class="recipe-note">${note}</p>`
-          }
+          ${actionMarkup || noteButtonMarkup ? `<div class="recipe-actions">${actionMarkup}${noteButtonMarkup}</div>` : ""}
+          ${noteMarkup}
         </article>
       `;
     })
@@ -199,6 +210,16 @@ recipeGrid.addEventListener("click", (event) => {
   const categoryButton = event.target.closest(".category-badge");
   if (categoryButton) {
     toggleCategoryFilter(categoryButton.dataset.category);
+    return;
+  }
+
+  const toggleButton = event.target.closest(".recipe-toggle");
+  if (toggleButton) {
+    const card = toggleButton.closest(".recipe-card");
+    if (!card) return;
+    const isOpen = card.classList.toggle("is-open");
+    toggleButton.textContent = isOpen ? "Hide recipe" : "View recipe";
+    toggleButton.setAttribute("aria-expanded", String(isOpen));
     return;
   }
 

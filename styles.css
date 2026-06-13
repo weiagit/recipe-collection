@@ -171,6 +171,17 @@ img {
   box-shadow: inset 0 0 0 1px rgba(35, 54, 59, 0.16);
 }
 
+.filter-chip.clear-button {
+  background: #f7efe0;
+  color: #846f46;
+  border-color: #e4d1aa;
+}
+
+.filter-chip.clear-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(132, 111, 70, 0.12);
+}
+
 .filter-chip.active {
   background: var(--accent);
   color: white;
@@ -296,6 +307,31 @@ img {
   margin-bottom: 2px;
 }
 
+.recipe-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.recipe-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.recipe-toggle {
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
 .tag-pill {
   border: 1px solid var(--border);
   background: var(--panel);
@@ -349,20 +385,29 @@ img {
 }
 
 .recipe-link {
-  margin-top: auto;
   color: var(--accent);
   text-decoration: none;
   font-weight: 700;
 }
 
-.recipe-note {
-  margin-top: auto;
+.recipe-note-panel {
+  display: none;
+  margin-top: 4px;
   padding: 10px 12px;
   border-radius: 12px;
   background: #edf7f5;
   color: #567d78;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.recipe-card.is-open .recipe-note-panel {
+  display: block;
+}
+
+.recipe-note-content {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .info-grid {
