@@ -3,7 +3,7 @@
   "short_name": "Recipe Journal",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#fff8ef",
-  "theme_color": "#d96b3d",
+  "background_color": "#f2fdfb",
+  "theme_color": "#0f766e",
   "description": "A simple recipe collection with search, filtering, and easy additions."
 }

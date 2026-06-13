@@ -1,3 +1,11 @@
+Ideas/wants:
+- jump to top button
+- tag buttons at top that you can click, also make the tags themselves clickable
+- different color
+
+
+----
+
 If you host it on GitHub Pages, the workflow is very straightforward:
 
 Put the project in a GitHub repository
