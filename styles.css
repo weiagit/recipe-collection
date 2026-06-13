@@ -163,13 +163,20 @@ img {
   border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
-.filter-chip.active,
-.tag-chip.active {
+.filter-chip.active {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
+}
+
+.tag-chip.active {
+  border-color: rgba(35, 54, 59, 0.28);
+  box-shadow: inset 0 0 0 2px rgba(35, 54, 59, 0.16);
+  color: var(--text);
+  transform: translateY(-1px);
 }
 
 .tag-chip--teal {
@@ -269,12 +276,14 @@ img {
 
 .tag-pill {
   border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .tag-pill:hover {
@@ -282,8 +291,39 @@ img {
   box-shadow: 0 8px 18px rgba(35, 54, 59, 0.08);
 }
 
+.tag-pill--teal {
+  background: #e8f1ee;
+  color: #4f7a72;
+}
+
+.tag-pill--blue {
+  background: #e8eff5;
+  color: #5b7e8f;
+}
+
+.tag-pill--green {
+  background: #edf3e8;
+  color: #6f8468;
+}
+
+.tag-pill--gray {
+  background: #eceeef;
+  color: #6d7578;
+}
+
+.tag-pill--mint {
+  background: #eaf3f2;
+  color: #587b79;
+}
+
+.tag-pill--yellow {
+  background: var(--accent-yellow);
+  color: #6f6840;
+}
+
 .tag-pill.active {
-  box-shadow: inset 0 0 0 1px rgba(35, 54, 59, 0.12);
+  border-color: rgba(35, 54, 59, 0.28);
+  box-shadow: inset 0 0 0 2px rgba(35, 54, 59, 0.16);
 }
 
 .recipe-link {

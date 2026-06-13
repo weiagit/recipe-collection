@@ -1,7 +1,7 @@
 const state = {
   search: "",
   category: "All",
-  tag: "",
+  tags: [],
   recipes: [],
 };
 
@@ -88,7 +88,7 @@ function renderTagFilters() {
 
   tags.forEach((tag) => {
     const button = document.createElement("button");
-    button.className = `tag-chip ${getTagStyle(tag)}${state.tag === tag ? " active" : ""}`;
+    button.className = `tag-chip ${getTagStyle(tag)}${state.tags.includes(tag) ? " active" : ""}`;
     button.type = "button";
     button.dataset.tag = tag;
     button.textContent = tag;
@@ -112,7 +112,7 @@ function renderRecipes() {
 
     const matchesSearch = searchText.includes(state.search.toLowerCase());
     const matchesCategory = state.category === "All" || recipe.category === state.category;
-    const matchesTag = !state.tag || (recipe.tags || []).includes(state.tag);
+    const matchesTag = !state.tags.length || state.tags.every((selectedTag) => (recipe.tags || []).includes(selectedTag));
     return matchesSearch && matchesCategory && matchesTag;
   });
 
@@ -132,8 +132,8 @@ function renderRecipes() {
       const tags = (recipe.tags || [])
         .map((tag) => {
           const tagClass = getTagStyle(tag).replace("tag-chip", "tag-pill");
-          const activeClass = state.tag === tag ? " active" : "";
-          return `<button class="${tagClass}${activeClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
+          const activeClass = state.tags.includes(tag) ? " active" : "";
+          return `<button class="tag-pill ${tagClass}${activeClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
         })
         .join("");
       const note = escapeHtml(recipe.text || "Recipe notes shared here.");
@@ -168,7 +168,7 @@ filterGroup.addEventListener("click", (event) => {
   if (clearButton) {
     state.search = "";
     state.category = "All";
-    state.tag = "";
+    state.tags = [];
     searchInput.value = "";
     filterButtons.forEach((chip) => chip.classList.remove("active"));
     filterGroup.querySelector(".filter-chip")?.classList.add("active");
@@ -191,7 +191,9 @@ toolbar.addEventListener("click", (event) => {
   if (!button) return;
 
   const clickedTag = button.dataset.tag;
-  state.tag = state.tag === clickedTag ? "" : clickedTag;
+  state.tags = state.tags.includes(clickedTag)
+    ? state.tags.filter((tag) => tag !== clickedTag)
+    : [...state.tags, clickedTag];
   renderTagFilters();
   renderRecipes();
 });
