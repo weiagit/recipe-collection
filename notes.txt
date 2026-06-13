@@ -1,4 +1,5 @@
 Ideas/wants:
+- clear filters
 - jump to top button
 - tag buttons at top that you can click, also make the tags themselves clickable
 - different color

@@ -1,6 +1,7 @@
 const state = {
   search: "",
   category: "All",
+  tag: "",
   recipes: [],
 };
 
@@ -74,7 +75,8 @@ function renderRecipes() {
 
     const matchesSearch = searchText.includes(state.search.toLowerCase());
     const matchesCategory = state.category === "All" || recipe.category === state.category;
-    return matchesSearch && matchesCategory;
+    const matchesTag = !state.tag || (recipe.tags || []).includes(state.tag);
+    return matchesSearch && matchesCategory && matchesTag;
   });
 
   resultsCount.textContent = `${filtered.length} recipe${filtered.length === 1 ? "" : "s"} found`;
@@ -89,8 +91,14 @@ function renderRecipes() {
       const title = escapeHtml(recipe.title || "Untitled recipe");
       const description = escapeHtml(recipe.description || "A simple favorite to keep nearby.");
       const category = escapeHtml(recipe.category || "Other");
-      const time = escapeHtml(recipe.time || "Any time");
-      const tags = (recipe.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+      const time = escapeHtml(recipe.time || "? min");
+      const tags = (recipe.tags || [])
+        .map((tag, index) => {
+          const tagClass = `tag-pill tag-pill--${index % 6}`;
+          const activeClass = state.tag === tag ? " active" : "";
+          return `<button class="${tagClass}${activeClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
+        })
+        .join("");
       const note = escapeHtml(recipe.text || "Recipe notes shared here.");
 
       return `
@@ -99,9 +107,9 @@ function renderRecipes() {
             <span class="badge">${category}</span>
             <span>${time}</span>
           </div>
+          <div class="tag-list">${tags}</div>
           <h3>${title}</h3>
           <p>${description}</p>
-          <div class="tag-list">${tags}</div>
           ${
             recipe.url
               ? `<a class="recipe-link" href="${escapeHtml(recipe.url)}" target="_blank" rel="noreferrer">View recipe →</a>`
@@ -115,6 +123,15 @@ function renderRecipes() {
 
 searchInput.addEventListener("input", (event) => {
   state.search = event.target.value.trim();
+  renderRecipes();
+});
+
+recipeGrid.addEventListener("click", (event) => {
+  const button = event.target.closest(".tag-pill");
+  if (!button) return;
+
+  const clickedTag = button.dataset.tag;
+  state.tag = state.tag === clickedTag ? "" : clickedTag;
   renderRecipes();
 });
 
