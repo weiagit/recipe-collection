@@ -4,7 +4,7 @@
     "description": "",
     "category": "Breakfast",
     "time": "",
-    "tags": ["quick", "make-ahead", "fruit"],
+    "tags": ["easy"],
     "url": "https://www.example.com/recipes/cinnamon-maple-oatmeal"
   },
   {
@@ -12,7 +12,7 @@
     "description": "Bright lunch wraps packed with herbs, crunchy vegetables, and a creamy spread.",
     "category": "Lunch",
     "time": "15 min",
-    "tags": ["fresh", "vegetarian", "meal-prep"],
+    "tags": ["air fryer"],
     "url": "https://www.example.com/recipes/garden-chickpea-wraps"
   },
   {
@@ -20,7 +20,7 @@
     "description": "A simple dinner with roasted potatoes, green beans, and citrusy chicken.",
     "category": "Dinner",
     "time": "35 min",
-    "tags": ["family", "one-pan", "comfort"],
+    "tags": ["roy", "easy", "favorite"],
     "url": "https://www.example.com/recipes/sheet-pan-lemon-chicken"
   },
   {
@@ -28,7 +28,7 @@
     "description": "Layered yogurt parfaits with berries, granola, and a hint of honey.",
     "category": "Dessert",
     "time": "8 min",
-    "tags": ["no-bake", "fresh", "sweet"],
+    "tags": ["roy", "favorite"],
     "url": "https://www.example.com/recipes/berry-yogurt-parfaits"
   },
   {
@@ -36,15 +36,15 @@
     "description": "Smoky roasted tomato hummus for dipping, toasts, and snack plates.",
     "category": "Snack",
     "time": "20 min",
-    "tags": ["dip", "vegetarian", "party"],
+    "tags": ["air fryer"],
     "url": "https://www.example.com/recipes/roasted-tomato-hummus"
   },
   {
     "title": "Herbed Tomato Couscous",
     "description": "A quick pantry lunch with herbs, tomatoes, and olive oil.",
-    "category": "Lunch",
+    "category": "Appetizer",
     "time": "20 min",
-    "tags": ["quick", "vegetarian", "pantry"],
+    "tags": ["am mom"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
   },
   {
@@ -52,7 +52,7 @@
     "description": "",
     "category": "Sus",
     "time": "",
-    "tags": ["easy", "vegetarian", "pantry"],
+    "tags": ["easy","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
   }
 ]

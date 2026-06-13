@@ -14,12 +14,8 @@ let filterButtons = [];
 
 function getTagStyle(tag) {
   const normalized = String(tag).toLowerCase();
-  if (normalized.includes("quick") || normalized.includes("easy") || normalized.includes("fresh")) return "tag-chip--teal";
-  if (normalized.includes("family") || normalized.includes("party") || normalized.includes("meal")) return "tag-chip--blue";
-  if (normalized.includes("sweet") || normalized.includes("fruit") || normalized.includes("vegetarian")) return "tag-chip--green";
-  if (normalized.includes("make") || normalized.includes("pantry") || normalized.includes("dip")) return "tag-chip--mint";
-  if (normalized.includes("comfort") || normalized.includes("warm") || normalized.includes("cozy")) return "tag-chip--yellow";
-  return "tag-chip--gray";
+  const hash = normalized.split("").reduce((acc, char) => (acc * 31 + char.charCodeAt(0)) % 5, 0);
+  return ["tag-chip--teal", "tag-chip--blue", "tag-chip--green", "tag-chip--mint", "tag-chip--yellow"][hash];
 }
 
 function escapeHtml(value) {
