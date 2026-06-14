@@ -1,5 +1,12 @@
 [
   {
+    "title": "Air Fryer Chicken Breast",
+    "description": "",
+    "category": "Dinner",
+    "time": "40 min",
+    "tags": ["air fryer", "want to try"],
+    "url": "/data/pdf/air-fryer-chicken-breast.pdf"
+  },  {
     "title": "Blueberry Crumble Pie",
     "description": "some pie",
     "category": "Breakfast",
