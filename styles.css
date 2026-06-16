@@ -172,8 +172,8 @@ img {
 }
 
 .filter-chip.clear-button {
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--accent);
+  color: white;
   /* border-color: var(--accent-soft); */
 }
 
@@ -262,6 +262,15 @@ img {
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.recipe-card p a,
+.recipe-note-content,
+.recipe-note-content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .meta-row {
@@ -305,6 +314,30 @@ img {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 2px;
+}
+
+.tag-pill.tag-hidden {
+  display: none;
+}
+
+.recipe-card.tags-expanded .tag-pill.tag-hidden {
+  display: inline-flex;
+}
+
+.tag-more {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  padding: 2px 5px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tag-more:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(35, 54, 59, 0.08);
 }
 
 .recipe-hero {

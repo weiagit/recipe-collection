@@ -158,13 +158,21 @@ function renderRecipes() {
       const noteMarkup = hasText
         ? `<div class="recipe-note-panel"><div class="recipe-note-content">${escapeHtml(noteText).replace(/\n/g, "<br>")}</div></div>`
         : "";
-      const tags = (recipe.tags || [])
-        .map((tag) => {
+      const maxVisibleTags = 5;
+      const tagsArray = recipe.tags || [];
+      const tagButtons = tagsArray
+        .map((tag, index) => {
           const tagClass = getTagStyle(tag).replace("tag-chip", "tag-pill");
           const activeClass = state.tags.includes(tag) ? " active" : "";
-          return `<button class="tag-pill ${tagClass}${activeClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
+          const hiddenClass = index >= maxVisibleTags ? " tag-hidden" : "";
+          return `<button class="tag-pill ${tagClass}${activeClass}${hiddenClass}" type="button" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
         })
         .join("");
+      const overflowCount = Math.max(0, tagsArray.length - maxVisibleTags);
+      const overflowButton = overflowCount
+        ? `<button class="tag-more" type="button" data-action="toggle-tags" data-overflow-count="${overflowCount}">+${overflowCount} more</button>`
+        : "";
+
       return `
         <article class="recipe-card">
           <div class="meta-row">
@@ -174,7 +182,7 @@ function renderRecipes() {
           ${imageMarkup ? `<div class="recipe-media">${imageMarkup}</div>` : ""}
           <h3>${title}</h3>
           ${descriptionMarkup}
-          <div class="tag-list">${tags}</div>
+          <div class="tag-list">${tagButtons}${overflowButton}</div>
           ${actionMarkup || noteButtonMarkup ? `<div class="recipe-actions">${actionMarkup}${noteButtonMarkup}</div>` : ""}
           ${noteMarkup}
         </article>
@@ -222,6 +230,16 @@ recipeGrid.addEventListener("click", (event) => {
     const isOpen = card.classList.toggle("is-open");
     toggleButton.textContent = isOpen ? "Hide recipe" : "View recipe";
     toggleButton.setAttribute("aria-expanded", String(isOpen));
+    return;
+  }
+
+  const overflowButton = event.target.closest(".tag-more");
+  if (overflowButton) {
+    const card = overflowButton.closest(".recipe-card");
+    if (!card) return;
+    const isExpanded = card.classList.toggle("tags-expanded");
+    const overflowCount = overflowButton.dataset.overflowCount;
+    overflowButton.textContent = isExpanded ? "Show less" : `+${overflowCount} more`;
     return;
   }
 

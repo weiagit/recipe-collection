@@ -1,15 +1,15 @@
 [
   {
     "title": "Air Fryer Chicken Breast",
-    "description": "",
-    "category": "Dinner",
+    "description": "https://www.madewithlau.com/recipes/air-fryer-chicken-breast",
+    "category": "Chicken",
     "time": "40 min",
     "tags": ["air fryer", "want to try"],
     "url": "/data/pdf/air-fryer-chicken-breast.pdf"
   },  {
     "title": "Blueberry Crumble Pie",
     "description": "some pie",
-    "category": "Breakfast",
+    "category": "Dessert",
     "time": "",
     "tags": ["easy"],
     "url": "https://sallysbakingaddiction.com/blueberry-crumble-pie/print/67672/",
@@ -18,9 +18,9 @@
     {
     "title": "Dan Dan Noodles",
     "description": "",
-    "category": "Dinner",
+    "category": "Noodles",
     "time": "",
-    "tags": ["spicy", "noodles", "want to try"],
+    "tags": ["spicy", "noodles", "want to try", "chinese", "easy", "favorite"],
     "url": "https://redhousespice.com/wprm_print/7913",
     "image":"https://redhousespice.com/wp-content/uploads/2017/02/Dan-dan-noodles-5-scaled.jpg"
   },
@@ -35,7 +35,7 @@
   {
     "title": "Sheet Pan Lemon Chicken",
     "description": "A simple dinner.",
-    "category": "Dinner",
+    "category": "Chicken",
     "time": "35 min",
     "tags": ["roy", "easy", "favorite"],
     "url": "https://www.example.com/recipes/sheet-pan-lemon-chicken"
