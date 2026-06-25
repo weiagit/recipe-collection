@@ -27,6 +27,21 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function resolveRecipeUrl(value) {
+  const trimmed = String(value || "").trim();
+  if (!trimmed) return "";
+  if (/^(?:https?:|mailto:|data:|\/\/)/i.test(trimmed)) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith("/")) {
+    const pageBase = window.location.pathname.replace(/\/[^/]*$/, "/");
+    return `${window.location.origin}${pageBase}${trimmed.slice(1)}`;
+  }
+
+  return trimmed;
+}
+
 async function loadRecipes() {
   try {
     const response = await fetch("./data/recipes.json");
@@ -143,14 +158,16 @@ function renderRecipes() {
       const categoryClass = state.categories.includes(recipe.category) ? " active" : "";
       const timeValue = String(recipe.time || "").trim();
       const timeMarkup = timeValue ? `<span>${escapeHtml(timeValue)}</span>` : "";
-      const imageUrl = escapeHtml(recipe.image || recipe.imageUrl || "");
+      const imageUrl = resolveRecipeUrl(recipe.image || recipe.imageUrl || "");
+      const escapedImageUrl = escapeHtml(imageUrl);
       const imageMarkup = imageUrl
-        ? `<img class="recipe-image" src="${imageUrl}" alt="${title}" loading="lazy" />`
+        ? `<img class="recipe-image" src="${escapedImageUrl}" alt="${title}" loading="lazy" />`
         : "";
       const noteText = String(recipe.text || "").trim();
       const hasText = Boolean(noteText);
-      const actionMarkup = recipe.url
-        ? `<a class="recipe-link" href="${escapeHtml(recipe.url)}" target="_blank" rel="noreferrer">View recipe →</a>`
+      const linkUrl = resolveRecipeUrl(recipe.url || "");
+      const actionMarkup = linkUrl
+        ? `<a class="recipe-link" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer">View recipe →</a>`
         : "";
       const noteButtonMarkup = hasText
         ? `<button class="recipe-toggle" type="button" data-action="toggle-note">View recipe</button>`
