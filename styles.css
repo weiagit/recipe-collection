@@ -232,9 +232,9 @@ img {
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
   gap: 16px;
-  /* justify-content: center; */
+  justify-content: start;
 }
 
 .recipe-card {
@@ -247,9 +247,8 @@ img {
   flex-direction: column;
   gap: 12px;
   transition: transform 180ms ease, box-shadow 180ms ease;
-  max-width: 273px;
-  /* max-width: 420px; */
-  /* margin: 0 auto; */
+  max-width: 260px;
+  width: 100%;
 }
 
 .recipe-card:hover {
