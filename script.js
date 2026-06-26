@@ -1,6 +1,6 @@
 const state = {
   search: "",
-  categories: [],
+  category: "",
   tags: [],
   recipes: [],
 };
@@ -60,18 +60,16 @@ function syncCategoryButtonState() {
   filterButtons = Array.from(document.querySelectorAll(".filter-chip"));
   filterButtons.forEach((chip) => {
     const isAllButton = chip.dataset.category === "All";
-    const isSelected = chip.dataset.category !== "All" && state.categories.includes(chip.dataset.category);
-    chip.classList.toggle("active", isAllButton ? !state.categories.length : isSelected);
+    const isSelected = chip.dataset.category !== "All" && state.category === chip.dataset.category;
+    chip.classList.toggle("active", isAllButton ? !state.category : isSelected);
   });
 }
 
 function toggleCategoryFilter(category) {
-  if (category === "All") {
-    state.categories = [];
-  } else if (state.categories.includes(category)) {
-    state.categories = state.categories.filter((selectedCategory) => selectedCategory !== category);
+  if (category === "All" || state.category === category) {
+    state.category = "";
   } else {
-    state.categories = [...state.categories, category];
+    state.category = category;
   }
 
   syncCategoryButtonState();
@@ -137,7 +135,7 @@ function renderRecipes() {
       .toLowerCase();
 
     const matchesSearch = searchText.includes(state.search.toLowerCase());
-    const matchesCategory = !state.categories.length || state.categories.includes(recipe.category);
+    const matchesCategory = !state.category || state.category === recipe.category;
     const matchesTag = !state.tags.length || state.tags.every((selectedTag) => (recipe.tags || []).includes(selectedTag));
     return matchesSearch && matchesCategory && matchesTag;
   });
@@ -155,7 +153,7 @@ function renderRecipes() {
       const description = escapeHtml(recipe.description || "").trim();
       const descriptionMarkup = description ? `<p>${description}</p>` : "";
       const category = escapeHtml(recipe.category || "Other");
-      const categoryClass = state.categories.includes(recipe.category) ? " active" : "";
+      const categoryClass = state.category === recipe.category ? " active" : "";
       const timeValue = String(recipe.time || "").trim();
       const timeMarkup = timeValue ? `<span>${escapeHtml(timeValue)}</span>` : "";
       const imageUrl = resolveRecipeUrl(recipe.image || recipe.imageUrl || "");
@@ -217,7 +215,7 @@ filterGroup.addEventListener("click", (event) => {
   const clearButton = event.target.closest("[data-action='clear']");
   if (clearButton) {
     state.search = "";
-    state.categories = [];
+    state.category = "";
     state.tags = [];
     searchInput.value = "";
     syncCategoryButtonState();
