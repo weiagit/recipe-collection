@@ -245,7 +245,7 @@ img {
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 11px;
   transition: transform 180ms ease, box-shadow 180ms ease;
   width: 100%;
   max-width: 100%;
@@ -275,8 +275,8 @@ img {
 .recipe-card p {
   margin: 0;
   color: var(--muted);
-  font-size: .9rem;
-  line-height: 1.5;
+  font-size: .8rem;
+  /* line-height: 1.5; */
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -285,7 +285,7 @@ img {
 .recipe-note-content a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .recipe-description a:hover,

@@ -1,7 +1,7 @@
 [
   {
     "title": "Air Fryer Salmon",
-    "description": "",
+    "description": "some stuff",
     "category": "Fish",
     "time": "",
     "tags": ["air fryer", "mom"],
@@ -34,7 +34,7 @@
   },
   {
     "title": "Air Fryer Chicken Breast",
-    "description": "https://www.madewithlau.com/recipes/air-fryer-chicken-breast",
+    "description": "[Link](https://www.madewithlau.com/recipes/air-fryer-chicken-breast)",
     "category": "Chicken",
     "time": "40 min",
     "tags": ["air fryer", "want to try"],
