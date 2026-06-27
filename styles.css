@@ -275,9 +275,22 @@ img {
 .recipe-card p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.6;
+  font-size: .9rem;
+  line-height: 1.5;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.recipe-description a,
+.recipe-note-content a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.recipe-description a:hover,
+.recipe-note-content a:hover {
+  text-decoration: underline;
 }
 
 .recipe-card p a,

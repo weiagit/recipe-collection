@@ -27,6 +27,19 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function formatDescription(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+
+  const withMarkdownLinks = escapeHtml(text)
+    .replace(/\n/g, "<br>")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>');
+
+  const withLinks = withMarkdownLinks.replace(/(^|[\s(])((https?:\/\/[^\s<>)]+))/g, '$1<a href="$2" target="_blank" rel="noreferrer">$2</a>');
+
+  return `<p class="recipe-description">${withLinks}</p>`;
+}
+
 function resolveRecipeUrl(value) {
   const trimmed = String(value || "").trim();
   if (!trimmed) return "";
@@ -150,8 +163,7 @@ function renderRecipes() {
   recipeGrid.innerHTML = filtered
     .map((recipe) => {
       const title = escapeHtml(recipe.title || "Untitled recipe");
-      const description = escapeHtml(recipe.description || "").trim();
-      const descriptionMarkup = description ? `<p>${description}</p>` : "";
+      const descriptionMarkup = formatDescription(recipe.description);
       const category = escapeHtml(recipe.category || "Other");
       const categoryClass = state.category === recipe.category ? " active" : "";
       const timeValue = String(recipe.time || "").trim();
