@@ -251,7 +251,7 @@ img {
   max-width: 100%;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 400px) {
   .recipe-grid {
     grid-template-columns: repeat(auto-fit, minmax(273px, 273px));
     justify-content: start;
