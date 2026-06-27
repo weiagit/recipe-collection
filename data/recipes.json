@@ -1,5 +1,13 @@
 [
   {
+    "title": "Air Fryer Lamb Cumin",
+    "description": "",
+    "category": "Lamb",
+    "time": "",
+    "tags": ["air fryer", "chinese", "favorite", "mom"],
+    "text": "- 1/3 cup lamb, cut into 1 inch chunks\n- 1-2 spoons soy sauce\n- 1/2 tsp salt\n- 1 chilli pepper, broken into small flakes\n- 2 tsp cumin\n- 1/4-½ tsp baking soda (to make softer)\n\nMix all ingredients in ziplock bag and marinate for at least 30 min.\nAir fry at 400F for 5 min."
+  },
+  {
     "title": "Hot and Sour Soup",
     "description": "",
     "category": "Soup",
@@ -21,7 +29,7 @@
     "description": "",
     "category": "Noodles",
     "time": "",
-    "tags": ["spicy", "noodles", "want to try", "chinese", "easy", "favorite"],
+    "tags": ["spicy", "want to try", "chinese"],
     "url": "https://redhousespice.com/wprm_print/7913",
     "image":"https://redhousespice.com/wp-content/uploads/2017/02/Dan-dan-noodles-5-scaled.jpg"
   },
@@ -30,7 +38,7 @@
     "description": "",
     "category": "Sus",
     "time": "",
-    "tags": ["easy"],
+    "tags": ["favorite"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
   },
   {
@@ -38,7 +46,7 @@
     "description": "",
     "category": "Sus",
     "time": "",
-    "tags": ["easy"],
+    "tags": ["favorite"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
   }
 ]
