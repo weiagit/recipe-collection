@@ -1,12 +1,20 @@
 [
   {
+    "title": "Sichuan Dry Fried Green Beans (gan bian si ji dou)",
+    "description": "",
+    "category": "Vegetable",
+    "time": "",
+    "tags": ["air fryer", "chinese", "mom"],
+    "text": "• green beans, garlic, peppercorns, bit of chilli pepper, sliced pre-cooked meat (opt.)\n\n• Put green beans in boiling water for 90 sec\n• Air fry at around 380°F for 5-6 min to dry out\n• Heat oil in a pan, add aromatics (garlic, peppercorns, bit of chilli pepper)\n• Then add sliced pre-cooked meat, then green beans"
+  },
+  {
     "title": "Oatmeal Chocolate Chip Cookies",
     "description": "",
     "category": "Dessert",
     "time": "",
     "tags": [],
     "url": "https://sallysbakingaddiction.com/oatmeal-chocolate-chip-cookies/print/67799/",
-    "image": "/data/img/oatmeal-choc-chip-pic.jpeg"
+    "image": "https://sallysbakingaddiction.com/wp-content/uploads/2017/05/oatmeal-chocolate-chip-cookies-265x265.jpg"
   },
   {
     "title": "Salmon Rice Bowl",
@@ -70,7 +78,7 @@
   {
     "title": "Roy blahb ablh",
     "description": "",
-    "category": "Sus",
+    "category": "Vegetable",
     "time": "",
     "tags": ["favorite"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
@@ -78,7 +86,7 @@
   {
     "title": "Joy bleh egblh",
     "description": "",
-    "category": "Sus",
+    "category": "Vegetable",
     "time": "",
     "tags": ["favorite"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
