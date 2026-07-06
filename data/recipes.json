@@ -1,5 +1,23 @@
 [
   {
+    "title": "Bean Sprouts and Pork",
+    "description": "",
+    "category": "Pork",
+    "time": "",
+    "tags": ["chinese", "dad"],
+    "text": "• bean sprouts, pre-cooked pork, scallions (opt.)\n\n• Wash bean sprouts, slice pork lengthwise into strips\n• Heat wok on high, check with hand that it's hot\n• Add a few tablespoons of oil, couple of chilli peppers. Add scallions \n• Order of stir fry ingredients depends on how long each needs to cook \n• First add meat, big spoon of doubanjiang (fermented black bean paste). Add bean sprouts and stir, add 1 tsp of salt\n• Add few tbsp of vinegar. If desired, can add a spicy sauce like laoganma\n• Can set heat to low, cover with lid for a bit if needed",
+    "image": "/data/img/bean-sprout-pork-pic.jpeg"
+  },
+  {
+    "title": "Tomato and Egg",
+    "description": "",
+    "category": "Egg",
+    "time": "",
+    "tags": ["chinese", "dad", "favorite"],
+    "text": "• 3 eggs, about 3 tomatoes (depends on size), chopped scallions (opt.)\n\n• Slice tomatoes, then cut lengthwise into strips\n• Mix eggs in bowl with scallions and about 1 tsp salt\n• Heat wok on high, check with hand that it's hot\n• Add few tablespoons of oil to coat a portion of the bottom. Add eggs, wait a moment, mix around\n• Add tomatoes, break smaller while stirring if needed\n• Add about 2 tsp sugar, 2 tsp soy sauce\n• Set heat to low, cover with lid for a bit if needed. Don't let all of the juice dry out",
+    "image": "/data/img/tomato-egg-pic.jpeg"
+  },
+  {
     "title": "Sichuan Dry Fried Green Beans (gan bian si ji dou)",
     "description": "",
     "category": "Vegetable",
