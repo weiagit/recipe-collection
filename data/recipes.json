@@ -1,5 +1,21 @@
 [
-  
+  {
+    "title": "Celery and Pork",
+    "description": "",
+    "category": "Pork",
+    "time": "",
+    "tags": ["chinese","dad"],
+    "text": "• Pork chops, 4 stalks celery, 3 cloves garlic\n\n• Prepare meat:\n• Cut pork chops into strips, cutting against the grain. Add an egg and mix with chopsticks to coat\n• Wash celery and slice straight across into small chunks. If celery is particularly dirty, wash a second time. Chop garlic \n• Heat wok on high, wait until hot. Add a few tbsp of oil. Add garlic, couple of chilli peppers\n• Add meat abd combine. Add a big spoonful of doubanjiang\n• When meat is mostly cooked, add celery. Add 1.5 tsp of salt, then 2 tsp of vinegar. (Typically, people add soy sauce instead of salt and don't usually add vinegar; this is preference)\n• Cover with lid on low, mixing every so often and replacing the lid",
+    "image": "/data/img/celery-pork-pic.jpeg"
+  },
+  {
+    "title": "Chao rou (general technique)",
+    "description": "",
+    "category": "Pork",
+    "time": "",
+    "tags": ["chinese","mom"],
+    "text": "• Prepare meat:\n• Rinse meat if needed, cut into thin strips and then smaller chunks\n• Add cornstarch, cooking wine, and thinly sliced ginger (strips) to the meat\n• Can stir fry with different vegetables. Cabbage is very easy, just need a bit of meat. Celery, onion work well\n• If celery: chop straight across or at a diagonal\n• Heat oil in wok, wait until hot. Then add meat, onions/garlic. Can use lid to avoid too much smell/smoke\n• Add soy sauce, vegetables. Can add a bit of water\n• When ready, add salt. If desired, can add a little bit of sesame oil"
+  },
   {
     "title": "Pidan Zhou",
     "description": "",
@@ -9,7 +25,7 @@
     "text": "• Add water and white rice (rice will expand)\n• Boil and let simmer until the rice has expanded\n• If desired, can add marinated pork that has been cut into very small pieces\n• Add salt, hujiaofen (white pepper)\n• Peel pidan and add to pot (can roughly slice beforehand, or inside the pot)"
   },
   {
-    "title": "Hard-boiled eggs",
+    "title": "Hard-boiled Eggs",
     "description": "",
     "category": "Egg",
     "time": "",
@@ -34,16 +50,16 @@
     "image": "https://sallysbakingaddiction.com/wp-content/uploads/2019/02/lemon-bars-on-shortbread-crust-2-265x265.jpg"
   },
   {
-    "title": "Celery and Pork",
+    "title": "Celery and (pre-cooked) Pork",
     "description": "",
     "category": "Pork",
     "time": "",
     "tags": ["chinese", "dad"],
     "text": "• celery, pre-cooked pork, scallions (opt.)\n\n• Chop celery into small chunks, chop 3 cloves garlic. Slice pre-cooked pork\n• Heat wok on high, check with hand that it's hot\n• Add a few tablespoons of oil, 3 chilli peppers, chopped garlic. Add meat and celery, 1 tsp salt\n• Add couple tbsp of pixian broad bean paste with chilli oil (similar to doubanjiang). Add couple tsp of vinegar (most people would probably use soy sauce)\n• Add few tbsp of water to help cook celery, cover with lid on low heat for a bit if needed",
-    "image": "/data/img/celery-pork-pic.jpeg"
+    "image": "/data/img/celery-precooked-pork-pic.jpeg"
   },
   {
-    "title": "Bean Sprouts and Pork",
+    "title": "Bean Sprouts and (pre-cooked) Pork",
     "description": "",
     "category": "Pork",
     "time": "",
@@ -57,7 +73,7 @@
     "category": "Egg",
     "time": "",
     "tags": ["chinese", "dad", "favorite"],
-    "text": "• 3 eggs, about 3 tomatoes (depends on size), chopped scallions (opt.)\n\n• Slice tomatoes, then cut lengthwise into strips\n• Mix eggs in bowl with scallions and about 1 tsp salt\n• Heat wok on high, check with hand that it's hot\n• Add few tablespoons of oil to coat a portion of the bottom. Add eggs, wait a moment, mix around\n• Add tomatoes, break smaller while stirring if needed\n• Add about 2 tsp sugar, 2 tsp soy sauce\n• Set heat to low, cover with lid for a bit if needed. Don't let all of the juice dry out",
+    "text": "• 3 eggs, about 3 tomatoes (depends on size), chopped scallions (opt.)\n\n• Slice tomatoes, then cut lengthwise into strips\n• Mix eggs in bowl with scallions and about 1 tsp salt\n• Heat wok on high, check with hand that it's hot\n• Add few tablespoons of oil to coat a portion of the bottom. Add eggs, wait a moment, mix around\n• Add tomatoes, break eggs and tomatoes smaller while stirring if needed\n• Add about 2 tsp sugar, 2 tsp soy sauce\n• Set heat to low, cover with lid for a bit if needed. Don't let all of the juice dry out",
     "image": "/data/img/tomato-egg-pic.jpeg"
   },
   {
@@ -147,7 +163,7 @@
   {
     "title": "Joy bleh egblh",
     "description": "",
-    "category": "Vegetable",
+    "category": "Pork",
     "time": "",
     "tags": ["favorite"],
     "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
