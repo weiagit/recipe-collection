@@ -3,6 +3,7 @@ const state = {
   category: "",
   tags: [],
   recipes: [],
+  activeRecipeSlug: "",
 };
 
 const recipeGrid = document.getElementById("recipeGrid");
@@ -25,6 +26,39 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function slugify(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getRecipeSlug(recipe) {
+  const explicitSlug = String(recipe?.slug || "").trim();
+  if (explicitSlug) {
+    return slugify(explicitSlug);
+  }
+
+  return slugify(recipe?.title || recipe?.id || "");
+}
+
+function getRecipePermalink(recipe) {
+  const slug = getRecipeSlug(recipe);
+  if (!slug) return "";
+
+  const params = new URLSearchParams(window.location.search);
+  params.set("recipe", slug);
+  return `?${params.toString()}`;
+}
+
+function syncActiveRecipeFromLocation() {
+  const params = new URLSearchParams(window.location.search);
+  state.activeRecipeSlug = params.get("recipe") || "";
 }
 
 function formatDescription(value) {
@@ -60,6 +94,7 @@ async function loadRecipes() {
     const response = await fetch("./data/recipes.json");
     if (!response.ok) throw new Error("Unable to load recipes");
     state.recipes = await response.json();
+    syncActiveRecipeFromLocation();
     buildCategoryFilters();
     renderTagFilters();
     renderRecipes();
@@ -150,7 +185,8 @@ function renderRecipes() {
     const matchesSearch = searchText.includes(state.search.toLowerCase());
     const matchesCategory = !state.category || state.category === recipe.category;
     const matchesTag = !state.tags.length || state.tags.every((selectedTag) => (recipe.tags || []).includes(selectedTag));
-    return matchesSearch && matchesCategory && matchesTag;
+    const matchesRecipe = !state.activeRecipeSlug || getRecipeSlug(recipe) === state.activeRecipeSlug;
+    return matchesSearch && matchesCategory && matchesTag && matchesRecipe;
   });
 
   resultsCount.textContent = `${filtered.length} recipe${filtered.length === 1 ? "" : "s"} found`;
@@ -163,6 +199,10 @@ function renderRecipes() {
   recipeGrid.innerHTML = filtered
     .map((recipe) => {
       const title = escapeHtml(recipe.title || "Untitled recipe");
+      const recipePermalink = getRecipePermalink(recipe);
+      const titleMarkup = recipePermalink
+        ? `<h3><a class="recipe-title-link" href="${escapeHtml(recipePermalink)}">${title}</a></h3>`
+        : `<h3>${title}</h3>`;
       const descriptionMarkup = formatDescription(recipe.description);
       const category = escapeHtml(recipe.category || "Other");
       const categoryClass = state.category === recipe.category ? " active" : "";
@@ -207,7 +247,7 @@ function renderRecipes() {
             ${timeMarkup}
           </div>
           ${imageMarkup ? `<div class="recipe-media">${imageMarkup}</div>` : ""}
-          <h3>${title}</h3>
+          ${titleMarkup}
           ${descriptionMarkup}
           <div class="tag-list">${tagButtons}${overflowButton}</div>
           ${actionMarkup || noteButtonMarkup ? `<div class="recipe-actions">${actionMarkup}${noteButtonMarkup}</div>` : ""}
@@ -229,7 +269,12 @@ filterGroup.addEventListener("click", (event) => {
     state.search = "";
     state.category = "";
     state.tags = [];
+    state.activeRecipeSlug = "";
     searchInput.value = "";
+    const params = new URLSearchParams(window.location.search);
+    params.delete("recipe");
+    const nextUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ""}${window.location.hash}`;
+    history.replaceState({}, "", nextUrl);
     syncCategoryButtonState();
     pressClearButton();
     renderTagFilters();
