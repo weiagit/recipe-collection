@@ -270,6 +270,7 @@ img {
 .recipe-card h3 {
   margin: 0;
   font-size: 1.05rem;
+  color: var(--text);
 }
 
 .recipe-title-link {
@@ -555,12 +556,12 @@ img {
 
 /* Unvisited link */
 a:link {
-  color: #6d95a2; 
+  color: var(--text); 
 }
 
 /* Visited link */
 a:visited {
-  color: #6d95a2;
+  color: var(--text); 
 }
 
 /* Mouse over link */

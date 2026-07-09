@@ -34,3 +34,7 @@ Share the link
 
 Send the GitHub Pages URL to others
 They can browse, search, and click through to the recipes
+
+
+To run locally:
+python3 -m http.server 8000
