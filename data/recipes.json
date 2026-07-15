@@ -1,4 +1,22 @@
-[
+[ 
+  {
+    "title": "Pizza",
+    "description": "",
+    "category": "Pork",
+    "time": "",
+    "tags": ["amy"],
+    "text": "• 1 cup hot water, 1/2 cup cold water, 1 tsp sugar, 2.25 tsp yeast, ~3 cups flour\n• Tomato sauce, pepperoni, other toppings/seasonings\n• Large circle pan and standard rectangular baking sheet\n\n• Mix hot water and cold water in a bowl. Add sugar and yeast and stir a little. Add flour gradually, about 1/2 a cup at a time, and mix until dough forms. Keep adding flour until the dough isn't too sticky anymore.\n• Knead for 5-10 min until smooth. Let rise for a few hours until doubled in size.\n• Preheat oven to 475°F (or whatever the max temperature of the oven is). Knead the dough a bit again, and then split with a knife into two pieces (one for the circle pan, one for the rectangle pan). Line the pans with aluminum foil and pour a bit of olive oil on the foil to prevent sticking.\n• For each pan, roll the dough in olive oil to coat the surface, and spread out the oil across the foil. Then stretch the dough with your fingers, shaping it little by little, until it covers the pan.\n• Add sauce and toppings, e.g. pepperoni. Sprinkle a bit of Italian seasoning and garlic powder on top.\n• Bake for 18-22 min until desired crispiness.",
+    "image": "/data/img/pizza-pic.jpeg"
+  }, 
+  {
+    "title": "Pumpkin Pie",
+    "description": "",
+    "category": "Dessert",
+    "time": "",
+    "tags": ["holiday"],
+    "url": "https://normansfarmmarket.com/homemade-pumpkin-pie/",
+    "image": "/data/img/pumpkin-pie-pic.jpeg"
+  }, 
   {
     "title": "Shortbread Wedge Cookies",
     "description": "Note: can bake in 9x13 pan and cut into rectangles",
@@ -39,7 +57,8 @@
     "category": "Egg",
     "time": "",
     "tags": ["favorite", "amy"],
-    "text": "• 7 eggs\n\n• Put bunch of eggs in pot, add water. Heat on low and wait for it to come to a rolling boil\n• Turn off the heat and let the eggs sit in the hot water for a total of 8 minutes — but budget time for getting out bowls of cold water (and ice if available), so set timer for 6 or 7 minutes\n• After the timer goes off, transfer the eggs into cold water. You can move them into the fridge. Eggs will be a little soft-boiled"
+    "text": "• 7 eggs\n\n• Put bunch of eggs in pot, add water. Heat on low and wait for it to come to a rolling boil\n• Turn off the heat and let the eggs sit in the hot water for a total of 8 minutes — but budget time for getting out bowls of cold water (and ice if available), so set timer for 6 or 7 minutes\n• After the timer goes off, transfer the eggs into cold water. You can move them into the fridge. Eggs will be a little soft-boiled",
+    "image": "/data/img/hard-boiled-egg-pic.jpeg"
   },
   {
     "title": "Tomato and Egg Noodles",
