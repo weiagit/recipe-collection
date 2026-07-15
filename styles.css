@@ -597,6 +597,34 @@ a:active {
   color: var(--accent-alt);
 }
 
+/* Scroll to Top Button */
+html {
+  scroll-behavior: smooth;
+}
+
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 70%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+#scrollToTopBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
 
 @media (max-width: 900px) {
   .hero {
