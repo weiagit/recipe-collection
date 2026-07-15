@@ -147,22 +147,39 @@ img {
   background: transparent;
 }
 
-.filter-group,
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .tag-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
-.filter-chip,
+.filter-chip {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  padding: 5px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  /* font-size: 0.8rem; */
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
 .tag-chip {
   border: 1px solid var(--border);
   background: var(--panel);
   color: var(--muted);
-  padding: 6px 10px;
+  padding: 2px 5px;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 0.85rem;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
@@ -419,7 +436,7 @@ img {
   border: 1px solid var(--border);
   background: var(--accent-soft);
   color: var(--accent);
-  padding: 2px 4px;
+  padding: 4px 8px;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 700;
