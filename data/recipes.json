@@ -1,13 +1,49 @@
 [ 
   {
+    "title": "Egg and Jalapeno",
+    "description": "",
+    "category": "Egg",
+    "time": "",
+    "tags": ["chinese", "dad"],
+    "text": "• Eggs, jalapenos, salt\n• Wok\n\n• Slice jalapenos into thin rings. Mix eggs in a bowl and add a bit of salt.\n• Heat the wok and wait until it's hot. Add oil, waiting again until it's hot enough. Then add the eggs and mix a bit (like tomato and egg). Add sliced jalapenos and combine.\n• Remove from heat and add salt to taste.",
+    "image": "/data/img/egg-jalapeno-pic.jpeg"
+  },  
+  {
+    "title": "Scallion Pancakes (cōng yóu bǐng)",
+    "description": "",
+    "category": "Dough",
+    "time": "",
+    "tags": ["chinese", "dad"],
+    "text": "• ~3 cups all-purpose flour\n• 1 cup boiling water, 1/2 cup cold water\n• 1/4 cup chopped scallions\n• Salt, oil\n\n• Mix the boiling and cold water and add flour about 1/2 a cup at a time to form a dough. Keep adding flour until the dough is not too sticky. Knead until smooth and let rest for at least 30 min.\n• After letting the dough rest, knead it a bit again. Divide into 6 or 8 pieces.\n• Roll out each piece of dough into a thin rectangle. Drip a bit of oil on the dough, add a bit of salt, and add some of the chopped scallions. Spread the ingredients evenly by grabbing an edge of the dough and patting around to move the ingredients across the dough. Starting from one edge of the dough, roll into a log. Then, coil the dough into a round snail shape.\n• Roll the coil into a flat pancake. Heat a pan and add a bit of oil, waiting for it to get hot enough. Then add the pancake and pan-fry both sides until golden brown on both sides.",
+    "image": "/data/img/scallion-pancakes-pic.jpeg"
+  },  
+  {
     "title": "Pizza",
     "description": "",
-    "category": "Pork",
+    "category": "Dough",
     "time": "",
     "tags": ["amy"],
     "text": "• 1 cup hot water, 1/2 cup cold water, 1 tsp sugar, 2.25 tsp yeast, ~3 cups flour\n• Tomato sauce, pepperoni, other toppings/seasonings\n• Large circle pan and standard rectangular baking sheet\n\n• Mix hot water and cold water in a bowl. Add sugar and yeast and stir a little. Add flour gradually, about 1/2 a cup at a time, and mix until dough forms. Keep adding flour until the dough isn't too sticky anymore.\n• Knead for 5-10 min until smooth. Let rise for a few hours until doubled in size.\n• Preheat oven to 475°F (or whatever the max temperature of the oven is). Knead the dough a bit again, and then split with a knife into two pieces (one for the circle pan, one for the rectangle pan). Line the pans with aluminum foil and pour a bit of olive oil on the foil to prevent sticking.\n• For each pan, roll the dough in olive oil to coat the surface, and spread out the oil across the foil. Then stretch the dough with your fingers, shaping it little by little, until it covers the pan.\n• Add sauce and toppings, e.g. pepperoni. Sprinkle a bit of Italian seasoning and garlic powder on top.\n• Bake for 18-22 min until desired crispiness.",
     "image": "/data/img/pizza-pic.jpeg"
   }, 
+  {
+    "title": "Pumpkin Bread",
+    "description": "",
+    "category": "Dessert",
+    "time": "",
+    "tags": ["holiday"],
+    "url": "https://www.onceuponachef.com/wprm_print/pumpkin-bread",
+    "image": "/data/img/pumpkin-bread-pic.jpeg"
+  },  
+  {
+    "title": "Berry Pie",
+    "description": "",
+    "category": "Dessert",
+    "time": "",
+    "tags": [],
+    "text": "• Frozen berries, store-bought pie crust, sugar, cornstarch\n• Glass pie dish, or otherwise round cake pan\n\n• Preheat oven to 400°F. Place one pie crust in pie pan and shape to fit. Mix frozen berries with a couple spoons of sugar and cornstarch\n• Pour berries into the pie crust. Slice the top pie crust into strips and lay over the berries in a lattice pattern (weaving the strips together). Crimp the edges by pinching with your fingers.\n• Bake for 30 min or 45-50 min until crust is golden brown.\n\n• Note: We usually add much less sugar than most recipes call for, so the pie is not very sweet.",
+    "image": "/data/img/berry-pie-pic.jpeg"
+  },  
   {
     "title": "Pumpkin Pie",
     "description": "",
@@ -27,7 +63,7 @@
     "image": "https://sallysbakingaddiction.com/wp-content/uploads/2021/11/shortbread-wedges-265x265.jpg"
   }, 
   {
-    "title": "Celery and Pork",
+    "title": "Pork and Celery",
     "description": "",
     "category": "Pork",
     "time": "",
@@ -78,7 +114,7 @@
     "image": "https://sallysbakingaddiction.com/wp-content/uploads/2019/02/lemon-bars-on-shortbread-crust-2-265x265.jpg"
   },
   {
-    "title": "Celery and (pre-cooked) Pork",
+    "title": "(pre-cooked) Pork and Celery",
     "description": "",
     "category": "Pork",
     "time": "",
@@ -87,7 +123,7 @@
     "image": "/data/img/celery-precooked-pork-pic.jpeg"
   },
   {
-    "title": "Bean Sprouts and (pre-cooked) Pork",
+    "title": "(pre-cooked) Pork and Bean Sprouts",
     "description": "",
     "category": "Pork",
     "time": "",
@@ -105,7 +141,7 @@
     "image": "/data/img/tomato-egg-pic.jpeg"
   },
   {
-    "title": "Sichuan Dry Fried Green Beans (gan bian si ji dou)",
+    "title": "Sichuan Dry Fried Green Beans (gān biān sì jì dòu)",
     "description": "",
     "category": "Vegetable",
     "time": "",
@@ -152,7 +188,8 @@
     "category": "Lamb",
     "time": "",
     "tags": ["air fryer", "chinese", "favorite", "mom"],
-    "text": "• 1/3 cup lamb, cut into 1 inch chunks\n• 1-2 spoons soy sauce\n• 1/2 tsp salt\n• 1 chilli pepper, broken into small flakes\n• 2 tsp cumin\n• 1/4-½ tsp baking soda (to make softer)\n\n• Mix all ingredients in ziplock bag and marinate for at least 30 min.\n• Air fry at 400F for 5 min."
+    "text": "• 1/3 cup lamb, cut into 1 inch chunks\n• 1-2 spoons soy sauce\n• 1/2 tsp salt\n• 1 chilli pepper, broken into small flakes\n• 2 tsp cumin\n• 1/4-½ tsp baking soda (to make softer)\n\n• Mix all ingredients in ziplock bag and marinate for at least 30 min.\n• Air fry at 400F for 5 min.",
+    "image": "/data/img/air-fryer-lamb-pic.jpeg"
   },
   {
     "title": "Hot and Sour Soup",
@@ -186,7 +223,8 @@
     "category": "Vegetable",
     "time": "",
     "tags": ["favorite"],
-    "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
+    "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link.",
+    "image": "/data/img/amogus-pic.jpeg"
   },
   {
     "title": "Joy bleh egblh",
@@ -194,6 +232,7 @@
     "category": "Pork",
     "time": "",
     "tags": ["favorite"],
-    "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link."
+    "text": "This recipe is kept as simple notes on the site. Add ingredients and steps here if you do not have a separate link.",
+    "image": "/data/img/squirrel-pic.jpeg"
   }
 ]
