@@ -1,5 +1,14 @@
 [ 
   {
+    "title": "Steak",
+    "description": "[Link](https://www.youtube.com/watch?v=f-twQeqQAZE)",
+    "category": "Beef",
+    "time": "",
+    "tags": ["roy"],
+    "text": "• Steak, rosemary, garlic, butter\n\n• Start with room temperature steak, e.g. fillet that weighs ~300g. Season well with salt and pepper on both sides, pat down.\n• Heat a pan on high, add in 1 tsp vegetable oil. Add in the steak and sear for about 2 and 1/2 minutes just until it has a golden crust. Flip it over. Add rosemary, garlic, and butter to pan. Let butter melt and baste the steak (spoon liquid on it) for about 2 minutes (i.e., a total of 4 and 1/2 minutes).\n• Remove steak from pan, put garlic and rosemary on top, and pour on juices. Let rest for 5 minutes. Yields medium rare steak.",
+    "image": "/data/img/steak.jpeg"
+  },  
+  {
     "title": "Egg and Jalapeno",
     "description": "",
     "category": "Egg",
@@ -86,7 +95,8 @@
     "category": "Soup",
     "time": "",
     "tags": ["chinese","mom"],
-    "text": "• Add water and white rice (rice will expand)\n• Boil and let simmer until the rice has expanded\n• If desired, can add marinated pork that has been cut into very small pieces\n• Add salt, hujiaofen (white pepper)\n• Peel pidan and add to pot (can roughly slice beforehand, or inside the pot)"
+    "text": "• Add water and white rice (rice will expand)\n• Boil and let simmer until the rice has expanded\n• If desired, can add marinated pork that has been cut into very small pieces\n• Add salt, hujiaofen (white pepper)\n• Peel pidan and add to pot (can roughly slice beforehand, or inside the pot)",
+    "image": "/data/img/pidan-zhou.jpeg"
   },
   {
     "title": "Hard-Boiled Eggs",
