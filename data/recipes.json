@@ -1,10 +1,35 @@
 [ 
   {
+    "title": "Microwave Chocolate Cake",
+    "description": "[Link](https://www.instagram.com/reel/DJp1AHVyCXG/?hl=en)",
+    "category": "Dessert",
+    "time": "",
+    "tags": ["nina", "microwave"],
+    "text": "• 2 eggs, 1/2 cup flour plus more if needed, ¼ cup cocoa powder, ¼ cup sugar of choice, ½ tsp baking powder, ¼ cup milk of choice, 2 tbsp chocolate roughly chopped, 3 tbsp melted butter OR peanut butter, pinch salt\n\n• In a small mixing bowl, add the flour, cocoa powder, baking powder, sugar and salt. Mix with a whisk to combine. Add the egg, milk, and butter/peanut butter. Mix together until a batter has formed. Stir chocolate shards into the batter.\n• Spoon batter into a medium bowl, smoothing out the top.\n• Microwave for 2-4 minutes depending on thickness of the bowl, until the cake is set.",
+    "image": "/data/img/microwave-chocolate-cake.jpeg"
+  },
+  {
+    "title": "Liang Fen",
+    "category": "Noodles",
+    "time": "",
+    "tags": ["chinese", "mom"],
+    "text": "• Green bean starch, water, seasonings (garlic, soy sauce, vinegar, sesame oil, chili oil), optional toppings (cucumber, peanuts)\n\n• Mix green bean starch and water in about a 1:10 ratio, e.g. 1/2 cup green bean starch and 10/4 cups water (can vary). Heat on low, stirring constantly until it boils. It should thicken and become a bit translucent. Turn off the heat and mix a bit longer.\n• Then pour into a flat dish or leave in the sauce pot and let cool in the fridge. It will take a few hours to harden.\n• Once it's solid, cut into strips or into a grid. Mince some garlic. Add a bit of soy sauce, vinegar, a bit of sesame oil, and chili oil. Can also add thinly sliced cucumber, or toast some peanuts in the microwave (1 min intervals, about 3 min total) and crush with a rolling pin.\n• Mix in seasonings and add toppings.",
+    "image": "/data/img/liang-fen.jpeg"
+  },
+  {
+    "title": "Tomato and Egg Daikon Noodles",
+    "category": "Noodles",
+    "time": "",
+    "tags": ["chinese", "roy"],
+    "text": "• Boil daikon with paigu to make soup.\n• Make tomato and egg as usual (see https://weiagit.github.io/recipe-collection/?recipe=tomato-and-egg-noodles).\n• Add cooked noodles, as well as tomato and egg, to soup.",
+    "image": "/data/img/tomato-egg-daikon-noodles.jpeg"
+  },
+  {
     "title": "Steak",
     "description": "[Link](https://www.youtube.com/watch?v=f-twQeqQAZE)",
     "category": "Beef",
     "time": "",
-    "tags": ["roy"],
+    "tags": ["roy","favorite"],
     "text": "• Steak, rosemary, garlic, butter\n\n• Start with room temperature steak, e.g. fillet that weighs ~300g. Season well with salt and pepper on both sides, pat down.\n• Heat a pan on high, add in 1 tsp vegetable oil. Add in the steak and sear for about 2 and 1/2 minutes just until it has a golden crust. Flip it over. Add rosemary, garlic, and butter to pan. Let butter melt and baste the steak (spoon liquid on it) for about 2 minutes (i.e., a total of 4 and 1/2 minutes).\n• Remove steak from pan, put garlic and rosemary on top, and pour on juices. Let rest for 5 minutes. Yields medium rare steak.",
     "image": "/data/img/steak.jpeg"
   },  
@@ -90,12 +115,12 @@
     "image": "/data/img/chao-rou.jpeg"
   },
   {
-    "title": "Pidan Zhou",
+    "title": "Pídàn Zhōu",
     "description": "",
     "category": "Soup",
     "time": "",
     "tags": ["chinese","mom"],
-    "text": "• Add water and white rice (rice will expand)\n• Boil and let simmer until the rice has expanded\n• If desired, can add marinated pork that has been cut into very small pieces\n• Add salt, hujiaofen (white pepper)\n• Peel pidan and add to pot (can roughly slice beforehand, or inside the pot)",
+    "text": "•Water, rice, pidan, marinated pork (opt.), salt, white pepper\n\n• Add water and white rice, e.g. 1/2 cup rice and 2 cups water. Note that the rice will expand as it cooks.\n• Boil and let simmer until the rice has expanded. If desired, you can whisk the rice to create a smoother texture.\n• If desired, can add marinated pork that has been cut into very small pieces.\n• Add salt, hújiāofěn (white pepper).\n• Peel 1 or 2 pídàn and add to pot (can roughly slice beforehand, or slice inside the pot).",
     "image": "/data/img/pidan-zhou.jpeg"
   },
   {
