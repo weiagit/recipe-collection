@@ -19,7 +19,7 @@
     "title": "Microwave Chocolate Cake",
     "description": "[Link](https://www.instagram.com/reel/DJp1AHVyCXG/?hl=en)",
     "category": "Dessert",
-    "tags": ["nina", "microwave"],
+    "tags": ["nina", "ruby", "microwave"],
     "text": "• 2 eggs, 1/2 cup flour plus more if needed, ¼ cup cocoa powder, ¼ cup sugar of choice, ½ tsp baking powder, ¼ cup milk of choice, 2 tbsp chocolate roughly chopped, 3 tbsp melted butter OR peanut butter, pinch salt\n\n• In a small mixing bowl, add the flour, cocoa powder, baking powder, sugar and salt. Mix with a whisk to combine. Add the egg, milk, and butter/peanut butter. Mix together until a batter has formed. Stir chocolate shards into the batter.\n• Spoon batter into a medium bowl, smoothing out the top.\n• Microwave for 2-4 minutes depending on thickness of the bowl, until the cake is set.",
     "image": "/data/img/microwave-chocolate-cake.jpeg"
   },
@@ -57,6 +57,24 @@
     "image": "/data/img/egg-jalapeno.jpeg"
   },  
   {
+    "title": "Dumplings",
+    "description": "",
+    "category": "Dough",
+    "time": "",
+    "tags": ["chinese", "mom"],
+    "text": "• 1 cup cold water, ~2 cups all-purpose flour\n• 1 lb ground meat (pork, beef, turkey), at least 3-6 stalks green onion, 1 zucchini, 2 mushrooms. (Instead of zucchini and mushrooms, can replace with bunch of chives, etc).\n• Cooking wine, soy sauce, dark soy sauce, sesame oil, salt, water, bread crumbs, ginger (fresh or ground)\n\n• Add the cold water to a mixing bowl. Then add flour about 1/2 a cup at a time to form a dough. Keep adding flour until the dough is not too sticky. Knead until smooth and let rest for at least 30 min.\n• Combine ground meat with chopped green onion, shredded zucchini, minced mushrooms, and seasonings (cooking wine, soy sauce, dark soy sauce, sesame oil, salt, water, bread crumbs, ginger) to make the filling. As needed, add water or bread crumbs for consistency that is easy to mix but not liquid-y at the bottom.\n• After letting the dough rest, boil a couple of inches of water in wok. Knead the dough a bit again. Divide into two halves. Shape each half of dough into a thin log and slice into even pieces, each about a 1.25 tbsp. Coat in flour and roll each piece with a rolling pin such that the middle is thicker than the edges. Dumpling wrappers are relatively thin. Spoon ~1.5 tbsp of filling into the center of the wrapper, and bring the opposite edges of the wrapper together. Pinch along the edges to secure.\n• Boil the dumplings in the water (between a few and a dozen at a time), making sure they don't stick to the pan. Wait for the water to boil 2 times—after each time, add a bit of cold water to the pan. Then, the next time the water boils, remove the dumplings.",
+    "image": "/data/img/dumpling.jpeg"
+  },
+  {
+    "title": "Baozi",
+    "description": "",
+    "category": "Dough",
+    "time": "",
+    "tags": ["chinese", "mom"],
+    "text": "• 1 cup boiling water, 1/2 cup cold water, 1 tbsp sugar, 2.25 tsp yeast, ~3 cups all-purpose flour\n• 1 lb ground meat (pork, beef, turkey), at least 3-6 stalks green onion, 1 zucchini, 2 mushrooms. (Instead of zucchini and mushrooms, can replace with bunch of chives, etc).\n• Cooking wine, soy sauce, dark soy sauce, sesame oil, salt, water, bread crumbs, ginger (fresh or ground)\n• Steamer\n\n• Mix the boiling and cold water. Add sugar and yeast, then add flour about 1/2 a cup at a time to form a dough. Keep adding flour until the dough is not too sticky. Knead until smooth and let rest for a few hours, or until doubled in size.\n• Combine ground meat with chopped green onion, shredded zucchini, minced mushrooms, and seasonings (cooking wine, soy sauce, dark soy sauce, sesame oil, salt, water, bread crumbs, ginger) to make the filling. As needed, add water or bread crumbs for consistency that is easy to mix but not liquid-y at the bottom.\n• Prepare 3-layer steamer by dumping 2 cup water into the bottom. Lay some wet paper towels to cover the bottom of each layer.\n• After rising, knead the dough a bit again. Divide into 3 pieces, which will each produce 7 baozi.\n• Shape each third of dough into a log and slice into about 7 even pieces. Coat in flour and roll each piece with a rolling pin such that the middle is thicker than the edges. Baozi wrappers are relatively thick. Spoon a couple tbsp of filling into the center of the wrapper, and pleat the edges of the wrapper in, pinching to secure.\n• Place the baozi in the steamer (e.g. 3 layers each with 7 baozi). Turn heat on low and let cook for 25-30 min.",
+    "image": "/data/img/baozi.jpeg"
+  },  
+  {
     "title": "Scallion Pancakes (cōng yóu bǐng)",
     "description": "",
     "category": "Dough",
@@ -64,7 +82,7 @@
     "tags": ["chinese", "dad"],
     "text": "• ~3 cups all-purpose flour\n• 1 cup boiling water, 1/2 cup cold water\n• 1/4 cup chopped scallions\n• Salt, oil\n\n• Mix the boiling and cold water and add flour about 1/2 a cup at a time to form a dough. Keep adding flour until the dough is not too sticky. Knead until smooth and let rest for at least 30 min.\n• After letting the dough rest, knead it a bit again. Divide into 6 or 8 pieces.\n• Roll out each piece of dough into a thin rectangle. Drip a bit of oil on the dough, add a bit of salt, and add some of the chopped scallions. Spread the ingredients evenly by grabbing an edge of the dough and patting around to move the ingredients across the dough. Starting from one edge of the dough, roll into a log. Then, coil the dough into a round snail shape.\n• Roll the coil into a flat pancake. Heat a pan and add a bit of oil, waiting for it to get hot enough. Then add the pancake and pan-fry both sides until golden brown.",
     "image": "/data/img/scallion-pancakes.jpeg"
-  },  
+  },
   {
     "title": "Pizza",
     "description": "",
@@ -255,18 +273,9 @@
     "title": "Air Fryer Chicken Breast",
     "description": "[Link](https://www.madewithlau.com/recipes/air-fryer-chicken-breast)",
     "category": "Chicken",
-    "time": "40 min",
+    "time": "",
     "tags": ["air fryer", "want to try"],
     "url": "/data/pdf/air-fryer-chicken-breast.pdf"
-  },
-  {
-    "title": "Dan Dan Noodles",
-    "description": "",
-    "category": "Noodles",
-    "time": "",
-    "tags": ["spicy", "want to try", "chinese"],
-    "url": "https://redhousespice.com/wprm_print/7913",
-    "image":"https://redhousespice.com/wp-content/uploads/2017/02/Dan-dan-noodles-5-scaled.jpg"
   },
   {
     "title": "Roy blahb ablh",
