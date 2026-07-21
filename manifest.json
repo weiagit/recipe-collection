@@ -1,9 +1,10 @@
 {
-  "name": "Recipe Journal",
-  "short_name": "Recipe Journal",
+  "name": "Recipe Collection",
+  "short_name": "Recipe Collection",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f2fdfb",
   "theme_color": "#0f766e",
-  "description": "A simple recipe collection with search, filtering, and easy additions."
+  "description": "A shareable recipe collection.",
+  "icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}]
 }
