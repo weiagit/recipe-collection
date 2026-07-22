@@ -1,4 +1,20 @@
-[ 
+[
+  {
+    "title": "Brownies",
+    "description": "",
+    "category": "Dessert",
+    "tags": ["nina"],
+    "url": "https://bromabakery.com/better-than-boxed-brownies/",
+    "image": "/data/img/brownies.jpeg"
+  },
+  {
+    "title": "Dùn Ròu (general technique)",
+    "description": "",
+    "category": "Pork",
+    "tags": ["chinese", "mom"],
+    "text": "• Meat, cooking wine, soy sauce, 1 chilli pepper, sichuan peppercorns, 1 star anise, 1 bay leaf, ginger\n\n• Rinse off meat. Add some water to a pan (estimate enough to mostly cover the meat).\n• Add cooking wine, soy sauce, 1 chilli pepper, a few sichuan peppercorns, 1 star anise, 1 bay leaf, ginger. If needed, top off with more water.\n• Cook on low until it boils (about 10 min), then let simmer for 1.5 to 2 hours. Finally, add salt.",
+    "image": "/data/img/dun-rou.jpeg"
+  },
   {
     "title": "Chocolate Roll Cake",
     "description": "",
