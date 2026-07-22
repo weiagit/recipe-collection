@@ -1,5 +1,21 @@
 [
   {
+    "title": "Shrimp and Celery",
+    "description": "",
+    "category": "Fish",
+    "tags": ["chinese", "mom"],
+    "text": "• Frozen shrimp, celery\n\n• Wash shrimp (can peel before cooking if desired). Slice celery into chunks at an angle. Roughly slice garlic.\n• In wok, heat oil over medium-high heat. Add garlic, then add shrimp and cook until pink, making sure both sides are cooked.\n• Add couple tsp of soy sauce and cooking wine. Add celery and cook until tender.",
+    "image": "/data/img/shrimp-celery.jpeg"
+  },
+  {
+    "title": "Air Fryer Chicken Thigh",
+    "description": "",
+    "category": "Chicken",
+    "tags": ["air fryer", "chinese", "mom"],
+    "text": "• 3 chicken thighs, soy sauce, white pepper, salt, ground ginger, cornstarch (opt.)\n\n• Can remove skin from chicken thighs if desired. Cut into chunks. Marinate the chicken with the seasonings in a plastic bag.\n• Chicken thighs already have some fat, so don't necessarily need to add oil. Cook in air fryer at 385°F for 8 minutes, flipping halfway through.\n• The chicken can be used for stir fry if desired, e.g. with bell pepper or cabbage.",
+    "image": "/data/img/air-fryer-chicken-thigh.jpeg"
+  },
+  {
     "title": "Broccoli Cheddar Soup",
     "description": "[Link](https://www.instagram.com/reel/DS6BYcojchU/)",
     "category": "Soup",
@@ -202,7 +218,8 @@
     "category": "Noodles",
     "time": "",
     "tags": ["chinese", "roy"],
-    "text": "• 3 tomatoes, eggs, noodles\n\n• Peel tomatoes: \n• Cut out the bottom of the tomato with a knife, and score the top of the tomato in an X shape. Place in an inch of water and boil until the skin begins to peel. Put the tomatoes in a bowl of cold water and peel off the skin\n• Stir fry tomatoes:\n• Heat a pan and add oil. Add the tomatoes and smash into small pieces using a wooden spoon. Let cook until the tomato changes color and slightly reduces\n• Add water, noodles, eggs, salt"
+    "text": "• 3 tomatoes, eggs, noodles\n\n• Peel tomatoes: \n• Cut out the bottom of the tomato with a knife, and score the top of the tomato in an X shape. Place in an inch of water and boil until the skin begins to peel. Put the tomatoes in a bowl of cold water and peel off the skin\n• Stir fry tomatoes:\n• Heat a pan and add oil. Add the tomatoes and smash into small pieces using a wooden spoon. Let cook until the tomato changes color and slightly reduces\n• Add water, noodles, eggs, salt",
+    "image": "/data/img/tomato-egg-noodles.jpeg"
   },
   {
     "title": "Lemon Bars",
@@ -299,7 +316,7 @@
     "category": "Soup",
     "time": "",
     "tags": ["nina", "spicy", "chinese", "favorite"],
-    "url": "/data/img/hot-and-sour-soup-recipe.jpeg",
+    "text": "• 1 cup shiitake mushrooms chopped, 1 cup dried wood ear/white fungus hydrated and sliced\n• 1 block of firm tofu cut into thin strips, 1 bamboo shoot, julienned, 1 carrot julienned, 1 large egg lightly beaten.\n• 6-8 cups chicken stock (or, use rou tang from stewing meat)\n• 1 tbsp light soy sauce, 2 tbsp dark soy sauce, 1 tsp sugar, 1 tsp ground white pepper, 1 tsp sesame oil, 3 tbsp chinese black vinegar\n• cornstarch\n• 1-3 dried red chilies (adjusted to spice tolerance)\n• ½ kg lean pork pork shoulder or tenderloin, sliced into thin strips (opt.)\n\n• Soak dried wood ear mushrooms and white fungus in warm water for about 15 minutes or until soft. Slice the shiitake mushrooms, fungus and wood ears.\n• Mix pork strips with 1 tbsp water until absorbed, then add a pinch of salt, 2 tsp oil, and 1 tsp cornstarch. Set aside to marinate.\n• Slice tofu, bamboo shoots, and carrots into thin strips. Beat the egg and chop scallions for garnish.\n• Heat oil in a hot pan/pot and briefly fry dried chilies until fragrant. Add 6-8 cups chicken stock to the same pan/pot and bring to a boil. Add pork, stir to separate strips.\n• Add rehydrated mushrooms, bamboo shoots, and carrots. Simmer for 2 minutes. Stir in soy sauces, salt, sugar, white pepper, and sesame oil. Let simmer.\n• Stir in cornstarch slurry (2 tbsp cornstarch + 2 tbsp water) in a thin stream while stirring the soup. Cook until slightly thickened. Add tofu and simmer briefly. Stir soup in one direction and slowly pour in the beaten egg to create ribbons, then give one gentle stir.\n• Turn off the heat. Add black vinegar and more white pepper, then taste and adjust for more heat or sourness as desired. Garnish with scallions.",
     "image": "/data/img/hot-and-sour-soup.jpeg"
   },
   {
