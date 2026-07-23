@@ -1,5 +1,36 @@
 [
   {
+    "title": "Double Chocolate Chip Cookies",
+    "description": "",
+    "category": "Dessert",
+    "tags": ["joy"],
+    "url": "https://bromabakery.com/double-chocolate-chip-cookies/print/31664/",
+    "image": "/data/img/double-choc-chip-cookie.jpeg"
+  },
+  {
+    "title": "M&M Cookies",
+    "description": "[Link](https://cooking.nytimes.com/recipes/1022767-m-and-m-cookies?smid=share-url)",
+    "category": "Dessert",
+    "tags": ["joy"],
+    "text": "• ½ cup unsalted butter very soft, 1 cup sugar, ¼ packed cup dark brown sugar, 1 large egg at room temperature, 1 tablespoon vanilla extract, 1 teaspoon kosher salt or ¾ teaspoon coarse kosher salt\n• ¼ teaspoon baking soda, 1 ½ cups all purpose flour, ½ cup M&Ms\n\n• Heat the oven to 350 degrees and line 2 large sheet pans with parchment.\n• In a large bowl, whisk together the butter, sugars, egg, vanilla and salt by hand until smooth and fluffy, at least 1 minute. Whisk in the baking soda, then switch to a rubber spatula. Add the flour, then carefully and coarsely chop the M&Ms, and add them, too. Gently stir to combine. Place the bowl in the refrigerator while you wait for the oven to finish heating.\n• Using two spoons or a cookie scoop, plop out 2-tablespoon rounds spaced a couple of inches apart on the sheet pans. (You should get about 8 cookies per pan.) Bake until lightly golden at the edges, 10 to 12 minutes. Let cool completely on the sheet pan; they will continue to cook as they sit.",
+    "image": "/data/img/m&m-cookie.jpeg"
+  },
+  {
+    "title": "Korean Ground Beef Bowl",
+    "description": "",
+    "category": "Beef",
+    "tags": ["joy"],
+    "url": "https://therecipecritic.com/wprm_print/korean-ground-beef-and-rice-bowls"
+  },
+  {
+    "title": "Cream Puffs",
+    "description": "Note: maybe double the sugar",
+    "category": "Dessert",
+    "tags": ["nina"],
+    "url": "https://www.allrecipes.com/recipe/19034/cream-puffs-ii/?print=",
+    "image": "/data/img/cream-puffs.jpeg"
+  },
+  {
     "title": "Sushi",
     "description": "",
     "category": "Fish",
