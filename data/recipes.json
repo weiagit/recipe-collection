@@ -1,5 +1,21 @@
 [
   {
+    "title": "Sushi",
+    "description": "",
+    "category": "Fish",
+    "tags": ["amy"],
+    "text": "• Rice, rice vinegar, sushi nori, imitation crab, cucumber, avocado\n\n• Sushi mat\n\n• Cook rice as usual and add some to a bowl (about a cup). Add some rice vinegar and mix. Thinly slice cucumber and avocado.\n• Lay out sushi mat and cover with a piece of plastic wrap. Spoon some sushi rice onto the mat and flatten with wet hands into the width of the nori. Put more water on your hands if it gets sticky.\n Lay either full piece or half piece of sushi nori on the rice. Place the sliced cucumber and avocado along the edge closest to you. Starting from that edge, roll tightly, pulling the plastic wrap to keep it from getting wrapped in.\n• Unwrap the plastic wrap and slice into pieces using a serrated knife. If the knife gets sticky, wash in water to remove the rice.",
+    "image": "/data/img/sushi.jpeg"
+  },
+  {
+    "title": "Pork and Broccoli, Carrots",
+    "description": "",
+    "category": "Pork",
+    "tags": ["chinese", "joy"],
+    "text": "• Pork chops, broccoli, carrots, garlic, onion\n\n• Cut pork chops into small pieces, slicing against the grain. Marinate with soy sauce, oyster sauce, and cornstarch for at least 10 min.\n• Cut broccoli and carrots into small pieces. Mince garlic and dice onion.\n• Heat pan and add oil when hot. Add garlic and onion. Add marinated pork and mix until the pork is mostly cooked. Add the broccoli and carrots. Cook until tender.",
+    "image": "/data/img/pork-broccoli-carrots.jpeg"
+  },
+  { 
     "title": "Shrimp and Celery",
     "description": "",
     "category": "Fish",
@@ -59,7 +75,7 @@
     "title": "Curry",
     "description": "",
     "category": "Soup",
-    "tags": ["chinese", "ruby", "favorite"],
+    "tags": ["chinese", "ruby", "joy", "favorite"],
     "text": "• 1 onion, 2-3 potatoes, 1-2 carrots, 2 blocks of curry (comes in flat box), some chicken (opt.) \n\n• If using chicken, cut into bite-sized pieces. Slice onion into strips. Cut potatoes and carrots into chunks—thinner pieces will cook faster.\n• Heat a pot on medium heat. Add a bit of oil and the chicken (if using). Cook until browned.\n• Add onion, then add potatoes and carrots and cook for a few minutes.\n• Add water to cover the ingredients. Bring to a boil, then reduce heat and simmer for about 20 minutes or until vegetables are tender. Towards the end, add the curry blocks and stir until dissolved.",
     "image": "/data/img/curry.jpeg"
   },
@@ -68,7 +84,7 @@
     "description": "",
     "category": "Fish",
     "tags": ["chinese", "dad"],
-    "text": "• Tilapia, 6 cloves garlic, green onions, 1/4 cup oil, chilli peppers, cooking wine, sugar, salt, soy sauce, vinegar\n\n• Assuming fish is already sliced down the middle and descaled, with insides removed. Cut off fins (top and side) and tail using scissors. Pull open the gills and cut out the two inner parts there. On both sides of the fish, cut a few angled slits along the fish.\n• Roughly slice garlic. Cut green onion into 2 inch chunks.\n• Heat wok on high, add a bunch of oil. Add 2-3 chilli peppers, garlic, green onions. Add fish, mix. Add a few tbsp of cooking wine. Set heat to low, add 3 tbsp sugar, 2.5 tbsp salt. Pour several tbsp soy sauce to coat fish, a bit less vinegar.\n• Cover and let simmer.",
+    "text": "• Tilapia, 6 cloves garlic, ginger, green onions, 1/4 cup oil, chilli peppers, cooking wine, sugar, salt, soy sauce, vinegar\n\n• Assuming fish is already sliced down the middle and descaled, with insides removed. Cut off fins (top and side) and tail using scissors. Pull open the gills and cut out the two inner parts there. On both sides of the fish, cut a few angled slits along the fish.\n• Roughly slice garlic and ginger. Cut green onion into 2 inch chunks.\n• Heat wok on high, add a bunch of oil. Add 2-3 chilli peppers, garlic, green onions. Add fish, mix. Add a few tbsp of cooking wine. Set heat to low, add 3 tbsp sugar, 2.5 tbsp salt. Pour several tbsp soy sauce to coat fish, a bit less vinegar.\n• Cover and let simmer.",
     "image": "/data/img/tilapia.jpeg"
   },
   {
