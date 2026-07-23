@@ -40,6 +40,14 @@
     "image": "/data/img/dun-rou.jpeg"
   },
   {
+    "title": "Caramel Chocolate Chip Cookies",
+    "description": "",
+    "category": "Dessert",
+    "tags": ["nina"],
+    "url": "https://www.displacedhousewife.com/wprm_print/the-best-chewy-salted-caramel-chocolate-chip-cookies",
+    "image": "/data/img/caramel-cookie.jpeg"
+  },
+  {
     "title": "Chocolate Roll Cake",
     "description": "",
     "category": "Dessert",
@@ -47,7 +55,7 @@
     "url": "https://sallysbakingaddiction.com/chocolate-cake-roll/print/70904/",
     "image": "/data/img/chocolate-roll-cake.jpeg"
   },
-{
+  {
     "title": "Curry",
     "description": "",
     "category": "Soup",
@@ -65,10 +73,10 @@
   },
   {
     "title": "Microwave Chocolate Cake",
-    "description": "[Link](https://www.instagram.com/reel/DJp1AHVyCXG/?hl=en)",
+    "description": "[Link](https://www.tiktok.com/@thehealthyhophead/video/7512228776726662446)",
     "category": "Dessert",
     "tags": ["nina", "ruby", "microwave"],
-    "text": "• 2 eggs, 1/2 cup flour plus more if needed, ¼ cup cocoa powder, ¼ cup sugar of choice, ½ tsp baking powder, ¼ cup milk of choice, 2 tbsp chocolate roughly chopped, 3 tbsp melted butter OR peanut butter, pinch salt\n\n• In a small mixing bowl, add the flour, cocoa powder, baking powder, sugar and salt. Mix with a whisk to combine. Add the egg, milk, and butter/peanut butter. Mix together until a batter has formed. Stir chocolate shards into the batter.\n• Spoon batter into a medium bowl, smoothing out the top.\n• Microwave for 2-4 minutes depending on thickness of the bowl, until the cake is set.",
+    "text": "• 1 tbsp melted butter or oil, 2 tbsp low calcium milk, 2 tbsp cocoa powder, 2 tbsp flour, 2 tbsp sweetener \n• Dash of vanilla, 1/4 tsp baking powder, pinch of salt, 1 dark chocolate truffle\n\n• Combine in small bowl until until a batter has formed. Smooth out the batter with a spoon. Push the chocolate truffle (or chocolate chips) into the batter.\n• Microwave for 1 minute or so depending on thickness of the bowl, until the cake is set.",
     "image": "/data/img/microwave-chocolate-cake.jpeg"
   },
   {
@@ -109,7 +117,7 @@
     "description": "",
     "category": "Dough",
     "time": "",
-    "tags": ["chinese", "mom", "favorite"],
+    "tags": ["chinese", "mom"],
     "text": "• 1 cup cold water, ~2 cups all-purpose flour\n• 1 lb ground meat (pork, beef, turkey), at least 3-6 stalks green onion, 1 zucchini, 2 mushrooms. (Instead of zucchini and mushrooms, can replace with bunch of chives, etc).\n• Cooking wine, soy sauce, dark soy sauce, sesame oil, salt, water, bread crumbs, ginger (fresh or ground)\n\n• Add the cold water to a mixing bowl. Then add flour about 1/2 a cup at a time to form a dough. Keep adding flour until the dough is not too sticky. Knead until smooth and let rest for at least 30 min.\n• Combine ground meat with chopped green onion, shredded zucchini, minced mushrooms, and seasonings (cooking wine, soy sauce, dark soy sauce, sesame oil, salt, water, bread crumbs, ginger) to make the filling. As needed, add water or bread crumbs for consistency that is easy to mix but not liquid-y at the bottom.\n• After letting the dough rest, boil a couple of inches of water in wok. Knead the dough a bit again. Divide into two halves. Shape each half of dough into a thin log and slice into even pieces, each about a 1.25 tbsp. Coat in flour and roll each piece with a rolling pin such that the middle is thicker than the edges. Dumpling wrappers are relatively thin. Spoon ~1.5 tbsp of filling into the center of the wrapper, and bring the opposite edges of the wrapper together. Pinch along the edges to secure.\n• Boil the dumplings in the water (between a few and a dozen at a time), making sure they don't stick to the pan. Wait for the water to boil 2 times—after each time, add a bit of cold water to the pan. Then, the next time the water boils, remove the dumplings.",
     "image": "/data/img/dumpling.jpeg"
   },
