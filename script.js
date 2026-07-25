@@ -113,6 +113,12 @@ function syncCategoryButtonState() {
   });
 }
 
+function toggleRecipe(card, toggleButton) {
+  const isOpen = card.classList.toggle("is-open");
+  toggleButton.textContent = isOpen ? "Hide recipe" : "View recipe";
+  toggleButton.setAttribute("aria-expanded", String(isOpen)); 
+}
+
 function toggleCategoryFilter(category) {
   if (category === "All" || state.category === category) {
     state.category = "";
@@ -298,10 +304,9 @@ recipeGrid.addEventListener("click", (event) => {
   const toggleButton = event.target.closest(".recipe-toggle");
   if (toggleButton) {
     const card = toggleButton.closest(".recipe-card");
-    if (!card) return;
-    const isOpen = card.classList.toggle("is-open");
-    toggleButton.textContent = isOpen ? "Hide recipe" : "View recipe";
-    toggleButton.setAttribute("aria-expanded", String(isOpen));
+    if (card) {
+      toggleRecipe(card, toggleButton);
+    }
     return;
   }
 
@@ -311,14 +316,25 @@ recipeGrid.addEventListener("click", (event) => {
     const card = recipeImage.closest(".recipe-card");
     const toggleButton = card.querySelector(".recipe-toggle");
     const recipeLink = card.querySelector(".recipe-link");
-    if (toggleButton) {
-      const isOpen = card.classList.toggle("is-open");
-      toggleButton.textContent = isOpen ? "Hide recipe" : "View recipe";
-      toggleButton.setAttribute("aria-expanded", String(isOpen));
-    } else if (recipeLink) {
+    if (card && toggleButton) {
+      toggleRecipe(card, toggleButton);
+    } else if (card && recipeLink) {
       // If there's a recipe link, navigate to it
       // window.location.href = recipeLink.href;
       window.open(recipeLink.href, '_blank');
+    }
+    return;
+  }
+
+  // Click recipe card 
+  const card = event.target.closest(".recipe-card");
+  if (card) {
+    const toggleButton = card.querySelector(".recipe-toggle");
+    const recipeLink = card.querySelector(".recipe-link");
+    if (toggleButton) {
+      toggleRecipe(card, toggleButton);
+    } else if (recipeLink) {
+      // window.open(recipeLink.href, '_blank');
     }
     return;
   }
