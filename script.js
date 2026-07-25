@@ -305,6 +305,24 @@ recipeGrid.addEventListener("click", (event) => {
     return;
   }
 
+  // Click recipe image
+  const recipeImage = event.target.closest(".recipe-media");
+  if (recipeImage) {
+    const card = recipeImage.closest(".recipe-card");
+    const toggleButton = card.querySelector(".recipe-toggle");
+    const recipeLink = card.querySelector(".recipe-link");
+    if (toggleButton) {
+      const isOpen = card.classList.toggle("is-open");
+      toggleButton.textContent = isOpen ? "Hide recipe" : "View recipe";
+      toggleButton.setAttribute("aria-expanded", String(isOpen));
+    } else if (recipeLink) {
+      // If there's a recipe link, navigate to it
+      // window.location.href = recipeLink.href;
+      window.open(recipeLink.href, '_blank');
+    }
+    return;
+  }
+
   const overflowButton = event.target.closest(".tag-more");
   if (overflowButton) {
     const card = overflowButton.closest(".recipe-card");
@@ -324,6 +342,7 @@ recipeGrid.addEventListener("click", (event) => {
     : [...state.tags, clickedTag];
   renderTagFilters();
   renderRecipes();
+
 });
 
 toolbar.addEventListener("click", (event) => {

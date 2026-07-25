@@ -298,8 +298,8 @@ img {
 }
 
 .recipe-title-link:hover {
-  color: var(--accent-alt) !important;
-  text-decoration: underline;
+  color: var(--text) !important;
+  text-decoration: none;
 }
 
 .recipe-card p {
