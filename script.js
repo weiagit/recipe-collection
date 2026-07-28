@@ -140,6 +140,7 @@ function toggleRecipe(card, toggleButton) {
 function toggleWideRecipe(card, wideButton) {
   const recipeSlug = card.dataset.recipeSlug || "";
   const shouldWiden = !card.classList.contains("is-expanded");
+  const shouldOpenDetails = shouldWiden;
 
   document.querySelectorAll(".recipe-card.is-expanded").forEach((expandedCard) => {
     if (expandedCard !== card) {
@@ -152,8 +153,28 @@ function toggleWideRecipe(card, wideButton) {
     }
   });
 
+  document.querySelectorAll(".recipe-card.is-open").forEach((openCard) => {
+    if (openCard !== card) {
+      openCard.classList.remove("is-open");
+      const openButton = openCard.querySelector(".recipe-toggle");
+      if (openButton) {
+        openButton.textContent = "Show details";
+        openButton.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+
   card.classList.toggle("is-expanded", shouldWiden);
   state.expandedRecipeSlug = shouldWiden ? recipeSlug : "";
+
+  card.classList.toggle("is-open", shouldOpenDetails);
+  state.openRecipeSlug = shouldOpenDetails ? recipeSlug : "";
+
+  const toggleButton = card.querySelector(".recipe-toggle");
+  if (toggleButton) {
+    toggleButton.textContent = shouldOpenDetails ? "Hide details" : "Show details";
+    toggleButton.setAttribute("aria-expanded", String(shouldOpenDetails));
+  }
 
   wideButton.textContent = shouldWiden ? "⤡" : "⤢";
   wideButton.setAttribute("aria-pressed", String(shouldWiden));

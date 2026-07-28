@@ -724,21 +724,30 @@ html {
 }
 
 .recipe-wide-toggle {
-  padding: 4px 7px;
-  min-width: 30px;
+  padding: 6px 8px;
+  min-width: 34px;
+  min-height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(90, 135, 128, 0.2);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f8fcfb 0%, #eef7f3 100%);
+  color: var(--accent);
+  box-shadow: 0 6px 16px rgba(79, 143, 138, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
 }
 
 .recipe-wide-toggle[aria-pressed="true"] {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #6ea69a 100%);
   color: white;
+  box-shadow: 0 10px 22px rgba(79, 143, 138, 0.18);
 }
 
 .recipe-wide-toggle:hover,
 .recipe-toggle:hover {
   transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(79, 143, 138, 0.14);
 }
 
 .meta-actions {
