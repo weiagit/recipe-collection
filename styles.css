@@ -721,6 +721,36 @@ html {
   line-height: 1.7;
 }
 
+.recipe-actions-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recipe-wide-toggle {
+  padding: 4px 7px;
+  min-width: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-wide-toggle[aria-pressed="true"] {
+  background: var(--accent);
+  color: white;
+}
+
+.recipe-wide-toggle:hover,
+.recipe-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.meta-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .recipe-card h3 {
   margin: 0;
   font-size: 1.05rem;

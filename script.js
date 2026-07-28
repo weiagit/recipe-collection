@@ -4,6 +4,7 @@ const state = {
   tags: [],
   recipes: [],
   activeRecipeSlug: "",
+  openRecipeSlug: "",
   expandedRecipeSlug: "",
 };
 
@@ -116,25 +117,46 @@ function syncCategoryButtonState() {
 
 function toggleRecipe(card, toggleButton) {
   const recipeSlug = card.dataset.recipeSlug || "";
-  const shouldExpand = !card.classList.contains("is-expanded");
+  const shouldOpen = !card.classList.contains("is-open");
 
-  document.querySelectorAll(".recipe-card.is-expanded").forEach((expandedCard) => {
-    if (expandedCard !== card) {
-      expandedCard.classList.remove("is-expanded");
-      const expandedButton = expandedCard.querySelector(".recipe-toggle");
-      if (expandedButton) {
-        expandedButton.textContent = "Expand recipe";
-        expandedButton.setAttribute("aria-expanded", "false");
+  document.querySelectorAll(".recipe-card.is-open").forEach((openCard) => {
+    if (openCard !== card) {
+      openCard.classList.remove("is-open");
+      const openButton = openCard.querySelector(".recipe-toggle");
+      if (openButton) {
+        openButton.textContent = "Show details";
+        openButton.setAttribute("aria-expanded", "false");
       }
     }
   });
 
-  card.classList.toggle("is-expanded", shouldExpand);
-  card.classList.toggle("is-open", shouldExpand);
-  state.expandedRecipeSlug = shouldExpand ? recipeSlug : "";
+  card.classList.toggle("is-open", shouldOpen);
+  state.openRecipeSlug = shouldOpen ? recipeSlug : "";
 
-  toggleButton.textContent = shouldExpand ? "Collapse recipe" : "Expand recipe";
-  toggleButton.setAttribute("aria-expanded", String(shouldExpand));
+  toggleButton.textContent = shouldOpen ? "Hide details" : "Show details";
+  toggleButton.setAttribute("aria-expanded", String(shouldOpen));
+}
+
+function toggleWideRecipe(card, wideButton) {
+  const recipeSlug = card.dataset.recipeSlug || "";
+  const shouldWiden = !card.classList.contains("is-expanded");
+
+  document.querySelectorAll(".recipe-card.is-expanded").forEach((expandedCard) => {
+    if (expandedCard !== card) {
+      expandedCard.classList.remove("is-expanded");
+      const expandedButton = expandedCard.querySelector(".recipe-wide-toggle");
+      if (expandedButton) {
+        expandedButton.textContent = "⤢";
+        expandedButton.setAttribute("aria-pressed", "false");
+      }
+    }
+  });
+
+  card.classList.toggle("is-expanded", shouldWiden);
+  state.expandedRecipeSlug = shouldWiden ? recipeSlug : "";
+
+  wideButton.textContent = shouldWiden ? "⤡" : "⤢";
+  wideButton.setAttribute("aria-pressed", String(shouldWiden));
 }
 
 function toggleCategoryFilter(category) {
@@ -240,12 +262,14 @@ function renderRecipes() {
       const noteText = String(recipe.text || "").trim();
       const hasText = Boolean(noteText);
       const recipeSlug = getRecipeSlug(recipe);
+      const isOpenCard = state.openRecipeSlug === recipeSlug;
       const isExpandedCard = state.expandedRecipeSlug === recipeSlug;
+      const wideButtonMarkup = `<button class="recipe-wide-toggle" type="button" data-action="toggle-wide" aria-pressed="${isExpandedCard ? "true" : "false"}" title="Expand card wider">${isExpandedCard ? "⤡" : "⤢"}</button>`;
       const linkUrl = resolveRecipeUrl(recipe.url || "");
       const actionMarkup = linkUrl
         ? `<a class="recipe-link" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer">View recipe →</a>`
         : "";
-      const noteButtonMarkup = `<button class="recipe-toggle" type="button" data-action="toggle-note" aria-expanded="${isExpandedCard ? "true" : "false"}">${isExpandedCard ? "Collapse recipe" : "Expand recipe"}</button>`;
+      const noteButtonMarkup = `<button class="recipe-toggle" type="button" data-action="toggle-note" aria-expanded="${isOpenCard ? "true" : "false"}">${isOpenCard ? "Hide details" : "Show details"}</button>`;
       const noteMarkup = hasText
         ? `<div class="recipe-note-panel"><div class="recipe-note-content">${escapeHtml(noteText).replace(/\n/g, "<br>")}</div></div>`
         : "";
@@ -265,10 +289,13 @@ function renderRecipes() {
         : "";
 
       return `
-        <article class="recipe-card${isExpandedCard ? " is-expanded is-open" : ""}" data-recipe-slug="${escapeHtml(recipeSlug)}">
+        <article class="recipe-card${isOpenCard ? " is-open" : ""}${isExpandedCard ? " is-expanded" : ""}" data-recipe-slug="${escapeHtml(recipeSlug)}">
           <div class="meta-row">
             <button class="badge category-badge${categoryClass}" type="button" data-category="${escapeHtml(recipe.category || "Other")}">${category}</button>
-            ${timeMarkup}
+            <div class="meta-actions">
+              ${timeMarkup}
+              ${wideButtonMarkup}
+            </div>
           </div>
           ${imageMarkup ? `<div class="recipe-media">${imageMarkup}</div>` : ""}
           ${titleMarkup}
@@ -294,6 +321,8 @@ filterGroup.addEventListener("click", (event) => {
     state.category = "";
     state.tags = [];
     state.activeRecipeSlug = "";
+    state.openRecipeSlug = "";
+    state.expandedRecipeSlug = "";
     searchInput.value = "";
     const params = new URLSearchParams(window.location.search);
     params.delete("recipe");
@@ -324,6 +353,15 @@ recipeGrid.addEventListener("click", (event) => {
     const card = toggleButton.closest(".recipe-card");
     if (card) {
       toggleRecipe(card, toggleButton);
+    }
+    return;
+  }
+
+  const wideButton = event.target.closest(".recipe-wide-toggle");
+  if (wideButton) {
+    const card = wideButton.closest(".recipe-card");
+    if (card) {
+      toggleWideRecipe(card, wideButton);
     }
     return;
   }
