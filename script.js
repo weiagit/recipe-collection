@@ -348,6 +348,27 @@ recipeGrid.addEventListener("click", (event) => {
     return;
   }
 
+  const tagButton = event.target.closest(".tag-pill");
+  if (tagButton) {
+    const clickedTag = tagButton.dataset.tag;
+    state.tags = state.tags.includes(clickedTag)
+      ? state.tags.filter((tag) => tag !== clickedTag)
+      : [...state.tags, clickedTag];
+    renderTagFilters();
+    renderRecipes();
+    return;
+  }
+
+  const overflowButton = event.target.closest(".tag-more");
+  if (overflowButton) {
+    const card = overflowButton.closest(".recipe-card");
+    if (!card) return;
+    const isExpanded = card.classList.toggle("tags-expanded");
+    const overflowCount = overflowButton.dataset.overflowCount;
+    overflowButton.textContent = isExpanded ? "Show less" : `+${overflowCount} more`;
+    return;
+  }
+
   const toggleButton = event.target.closest(".recipe-toggle");
   if (toggleButton) {
     const card = toggleButton.closest(".recipe-card");
@@ -366,55 +387,34 @@ recipeGrid.addEventListener("click", (event) => {
     return;
   }
 
+  const recipeLink = event.target.closest(".recipe-link");
+  if (recipeLink) {
+    return;
+  }
+
   // Click recipe image
   const recipeImage = event.target.closest(".recipe-media");
   if (recipeImage) {
     const card = recipeImage.closest(".recipe-card");
-    const toggleButton = card.querySelector(".recipe-toggle");
-    const recipeLink = card.querySelector(".recipe-link");
-    if (card && toggleButton) {
-      toggleRecipe(card, toggleButton);
-    } else if (card && recipeLink) {
-      // If there's a recipe link, navigate to it
-      // window.location.href = recipeLink.href;
-      window.open(recipeLink.href, '_blank');
+    const toggleButtonInside = card?.querySelector(".recipe-toggle");
+    const linkInside = card?.querySelector(".recipe-link");
+    if (card && toggleButtonInside) {
+      toggleRecipe(card, toggleButtonInside);
+    } else if (card && linkInside) {
+      window.open(linkInside.href, '_blank');
     }
     return;
   }
 
-  // Click recipe card 
+  // Click recipe card
   const card = event.target.closest(".recipe-card");
   if (card) {
-    const toggleButton = card.querySelector(".recipe-toggle");
-    const recipeLink = card.querySelector(".recipe-link");
-    if (toggleButton) {
-      toggleRecipe(card, toggleButton);
-    } else if (recipeLink) {
-      // window.open(recipeLink.href, '_blank');
+    const cardToggleButton = card.querySelector(".recipe-toggle");
+    if (cardToggleButton) {
+      toggleRecipe(card, cardToggleButton);
     }
     return;
   }
-
-  const overflowButton = event.target.closest(".tag-more");
-  if (overflowButton) {
-    const card = overflowButton.closest(".recipe-card");
-    if (!card) return;
-    const isExpanded = card.classList.toggle("tags-expanded");
-    const overflowCount = overflowButton.dataset.overflowCount;
-    overflowButton.textContent = isExpanded ? "Show less" : `+${overflowCount} more`;
-    return;
-  }
-
-  const tagButton = event.target.closest(".tag-pill");
-  if (!tagButton) return;
-
-  const clickedTag = tagButton.dataset.tag;
-  state.tags = state.tags.includes(clickedTag)
-    ? state.tags.filter((tag) => tag !== clickedTag)
-    : [...state.tags, clickedTag];
-  renderTagFilters();
-  renderRecipes();
-
 });
 
 toolbar.addEventListener("click", (event) => {
