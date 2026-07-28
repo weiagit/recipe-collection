@@ -708,10 +708,6 @@ html {
   border-color: rgba(90, 135, 128, 0.35);
 }
 
-.recipe-card.is-expanded .recipe-note-panel {
-  display: block;
-}
-
 .recipe-card.is-expanded .recipe-image {
   height: 220px;
 }
