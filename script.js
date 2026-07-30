@@ -124,7 +124,7 @@ function toggleRecipe(card, toggleButton) {
       openCard.classList.remove("is-open");
       const openButton = openCard.querySelector(".recipe-toggle");
       if (openButton) {
-        openButton.textContent = "Show details";
+        openButton.textContent = "View recipe";
         openButton.setAttribute("aria-expanded", "false");
       }
     }
@@ -133,7 +133,7 @@ function toggleRecipe(card, toggleButton) {
   card.classList.toggle("is-open", shouldOpen);
   state.openRecipeSlug = shouldOpen ? recipeSlug : "";
 
-  toggleButton.textContent = shouldOpen ? "Hide details" : "Show details";
+  toggleButton.textContent = shouldOpen ? "Hide recipe" : "View recipe";
   toggleButton.setAttribute("aria-expanded", String(shouldOpen));
 }
 
@@ -158,7 +158,7 @@ function toggleWideRecipe(card, wideButton) {
       openCard.classList.remove("is-open");
       const openButton = openCard.querySelector(".recipe-toggle");
       if (openButton) {
-        openButton.textContent = "Show details";
+        openButton.textContent = "View recipe";
         openButton.setAttribute("aria-expanded", "false");
       }
     }
@@ -172,11 +172,12 @@ function toggleWideRecipe(card, wideButton) {
 
   const toggleButton = card.querySelector(".recipe-toggle");
   if (toggleButton) {
-    toggleButton.textContent = shouldOpenDetails ? "Hide details" : "Show details";
+    toggleButton.textContent = shouldOpenDetails ? "Hide recipe" : "View recipe";
     toggleButton.setAttribute("aria-expanded", String(shouldOpenDetails));
   }
 
-  wideButton.textContent = shouldWiden ? "⤡" : "⤢";
+  // wideButton.textContent = shouldWiden ? "↙" : "⤢";
+  wideButton.textContent = shouldWiden ? "×" : "⤢";
   wideButton.setAttribute("aria-pressed", String(shouldWiden));
 }
 
@@ -285,12 +286,12 @@ function renderRecipes() {
       const recipeSlug = getRecipeSlug(recipe);
       const isOpenCard = state.openRecipeSlug === recipeSlug;
       const isExpandedCard = state.expandedRecipeSlug === recipeSlug;
-      const wideButtonMarkup = `<button class="recipe-wide-toggle" type="button" data-action="toggle-wide" aria-pressed="${isExpandedCard ? "true" : "false"}" title="Expand card wider">${isExpandedCard ? "⤡" : "⤢"}</button>`;
+      const wideButtonMarkup = `<button class="recipe-wide-toggle" type="button" data-action="toggle-wide" aria-pressed="${isExpandedCard ? "true" : "false"}" title="Expand card wider">${isExpandedCard ? "×" : "⤢"}</button>`;
       const linkUrl = resolveRecipeUrl(recipe.url || "");
       const actionMarkup = linkUrl
         ? `<a class="recipe-link" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer">View recipe →</a>`
         : "";
-      const noteButtonMarkup = `<button class="recipe-toggle" type="button" data-action="toggle-note" aria-expanded="${isOpenCard ? "true" : "false"}">${isOpenCard ? "Hide details" : "Show details"}</button>`;
+      const noteButtonMarkup = `<button class="recipe-toggle" type="button" data-action="toggle-note" aria-expanded="${isOpenCard ? "true" : "false"}">${isOpenCard ? "Hide recipe" : "View recipe"}</button>`;
       const noteMarkup = hasText
         ? `<div class="recipe-note-panel"><div class="recipe-note-content">${escapeHtml(noteText).replace(/\n/g, "<br>")}</div></div>`
         : "";
@@ -405,6 +406,11 @@ recipeGrid.addEventListener("click", (event) => {
     if (card) {
       toggleWideRecipe(card, wideButton);
     }
+    return;
+  }
+
+  const titleLink = event.target.closest(".recipe-title-link");
+  if (titleLink) {
     return;
   }
 

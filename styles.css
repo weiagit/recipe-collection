@@ -305,7 +305,7 @@ img {
 .recipe-card p {
   margin: 0;
   color: var(--muted);
-  font-size: .7rem;
+  font-size: .75rem;
   /* line-height: 1.5; */
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -499,7 +499,7 @@ img {
   color: var(--accent);
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .recipe-note-panel {
@@ -724,24 +724,19 @@ html {
 }
 
 .recipe-wide-toggle {
-  padding: 6px 8px;
+  padding: 0px 0px;
   min-width: 34px;
   min-height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(90, 135, 128, 0.2);
+  border: 0px solid rgba(90, 135, 128, 0.2);
   border-radius: 999px;
   background: linear-gradient(135deg, #f8fcfb 0%, #eef7f3 100%);
-  color: var(--accent);
+  /* background: var(--panel); */
+  color: var(--accent-alt);
   box-shadow: 0 6px 16px rgba(79, 143, 138, 0.08);
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
-}
-
-.recipe-wide-toggle[aria-pressed="true"] {
-  background: linear-gradient(135deg, var(--accent) 0%, #6ea69a 100%);
-  color: white;
-  box-shadow: 0 10px 22px rgba(79, 143, 138, 0.18);
 }
 
 .recipe-wide-toggle:hover,
@@ -760,26 +755,6 @@ html {
   margin: 0;
   font-size: 1.05rem;
   color: var(--text);
-}
-
-.recipe-title-link {
-  color: var(--text) !important;
-  text-decoration: none;
-}
-
-.recipe-title-link:hover {
-  color: var(--accent-alt) !important;
-  text-decoration: underline;
-}
-
-.recipe-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: .7rem;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  margin-inline-start: 2px;
-  margin-inline-end: 2px;
 }
 
 .recipe-description a,
@@ -836,35 +811,12 @@ html {
   border-color: var(--accent);
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 2px;
-}
-
 .tag-pill.tag-hidden {
   display: none;
 }
 
 .recipe-card.tags-expanded .tag-pill.tag-hidden {
   display: inline-flex;
-}
-
-.tag-more {
-  border: 1px solid var(--border);
-  background: var(--panel);
-  color: var(--muted);
-  padding: 2px 5px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.tag-more:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(35, 54, 59, 0.08);
 }
 
 .recipe-hero {
@@ -901,14 +853,14 @@ html {
 }
 
 .recipe-toggle {
-  border: 1px solid var(--border);
-  background: var(--accent-soft);
-  color: var(--accent);
-  padding: 4px 8px;
+  border: 0px solid var(--border);
+  background: var(--panel);
+  color: var(--accent-alt);
+  padding: 0px 0px;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .tag-pill {
@@ -961,13 +913,6 @@ html {
 .tag-pill.active {
   border-color: rgba(35, 54, 59, 0.28);
   box-shadow: inset 0 0 0 2px rgba(35, 54, 59, 0.16);
-}
-
-.recipe-link {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
 }
 
 .recipe-note-panel {
