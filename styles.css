@@ -45,7 +45,7 @@ img {
   border-radius: 28px;
   padding: 25px;
   box-shadow: var(--shadow);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .eyebrow {
@@ -553,8 +553,7 @@ img {
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
 }
 
-.recipe-wide-toggle:hover,
-.recipe-toggle:hover {
+.recipe-wide-toggle:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 22px rgba(79, 143, 138, 0.14);
 }
