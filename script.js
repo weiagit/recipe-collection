@@ -6,6 +6,7 @@ const state = {
   activeRecipeSlug: "",
   openRecipeSlug: "",
   expandedRecipeSlug: "",
+  previousScrollY: 0,
 };
 
 const recipeGrid = document.getElementById("recipeGrid");
@@ -142,6 +143,10 @@ function toggleWideRecipe(card, wideButton) {
   const shouldWiden = !card.classList.contains("is-expanded");
   const shouldOpenDetails = shouldWiden;
 
+  if (shouldWiden) {
+    state.previousScrollY = window.scrollY;
+  }
+
   document.querySelectorAll(".recipe-card.is-expanded").forEach((expandedCard) => {
     if (expandedCard !== card) {
       expandedCard.classList.remove("is-expanded");
@@ -166,6 +171,12 @@ function toggleWideRecipe(card, wideButton) {
 
   card.classList.toggle("is-expanded", shouldWiden);
   state.expandedRecipeSlug = shouldWiden ? recipeSlug : "";
+
+  if (shouldWiden) {
+    window.scrollTo({ top: Math.max(card.offsetTop - 14, 0), behavior: "auto" });
+  } else {
+    window.scrollTo({ top: state.previousScrollY, behavior: "auto" });
+  }
 
   card.classList.toggle("is-open", shouldOpenDetails);
   state.openRecipeSlug = shouldOpenDetails ? recipeSlug : "";
