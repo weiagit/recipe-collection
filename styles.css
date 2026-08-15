@@ -520,15 +520,26 @@ img {
   display: block;
 }
 
+.recipe-grid:has(.recipe-card.is-expanded) {
+  grid-template-columns: 1fr;
+}
+
 .recipe-card.is-expanded {
-  grid-column: span 2;
+  grid-column: 1 / -1;
+  width: 100%;
   max-width: none;
   box-shadow: 0 22px 48px rgba(79, 143, 138, 0.16);
   border-color: rgba(90, 135, 128, 0.35);
+  margin-top: 0;
 }
 
 .recipe-card.is-expanded .recipe-image {
-  height: 220px;
+  width: min(100%, 760px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .recipe-card.is-expanded .recipe-description {
