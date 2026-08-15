@@ -524,6 +524,10 @@ img {
   grid-template-columns: 1fr;
 }
 
+.recipe-grid:has(.recipe-card.is-expanded) .recipe-card:not(.is-expanded) {
+  display: none;
+}
+
 .recipe-card.is-expanded {
   grid-column: 1 / -1;
   width: 100%;

@@ -167,10 +167,6 @@ function toggleWideRecipe(card, wideButton) {
   card.classList.toggle("is-expanded", shouldWiden);
   state.expandedRecipeSlug = shouldWiden ? recipeSlug : "";
 
-  if (shouldWiden) {
-    card.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
   card.classList.toggle("is-open", shouldOpenDetails);
   state.openRecipeSlug = shouldOpenDetails ? recipeSlug : "";
 
