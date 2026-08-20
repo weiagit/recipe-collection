@@ -1,5 +1,20 @@
 :root {
   color-scheme: light;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-display: "Inter", "Segoe UI", sans-serif;
+
+  /* --font-body: "DM Sans", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif; */
+
+  /* --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-display: "Libre Baskerville", Georgia, serif; */
+
+  /* --font-body: "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Georgia", serif; */
+
+  /* --font-body: "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Georgia", serif; */
+
   --bg: #f8f9f8;
   --panel: #ffffff;
   --text: #23363b;
@@ -20,7 +35,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   background: linear-gradient(135deg, #fcfdfc 0%, #f4f7f7 100%);
   color: var(--text);
 }
@@ -59,6 +74,7 @@ img {
 }
 
 .hero h1 {
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 0 0 12px;
 }
@@ -286,6 +302,7 @@ img {
 
 .recipe-card h3 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: 1.05rem;
   color: var(--text);
 }
