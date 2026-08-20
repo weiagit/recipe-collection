@@ -138,6 +138,17 @@ function toggleRecipe(card, toggleButton) {
   toggleButton.setAttribute("aria-expanded", String(shouldOpen));
 }
 
+function hasActiveTextSelectionWithin(element) {
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
+    return false;
+  }
+
+  const selectedNode = selection.getRangeAt(0).commonAncestorContainer;
+  const selectedElement = selectedNode.nodeType === Node.ELEMENT_NODE ? selectedNode : selectedNode.parentElement;
+  return Boolean(selectedElement && element.contains(selectedElement));
+}
+
 function toggleWideRecipe(card, wideButton) {
   const recipeSlug = card.dataset.recipeSlug || "";
   const shouldWiden = !card.classList.contains("is-expanded");
@@ -447,6 +458,10 @@ recipeGrid.addEventListener("click", (event) => {
   // Click recipe card
   const card = event.target.closest(".recipe-card");
   if (card) {
+    if (hasActiveTextSelectionWithin(card)) {
+      return;
+    }
+
     const cardToggleButton = card.querySelector(".recipe-toggle");
     if (cardToggleButton) {
       toggleRecipe(card, cardToggleButton);
