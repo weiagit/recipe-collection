@@ -1,5 +1,19 @@
 [
   {
+    "title": "Sheet-Pan Chicken Thighs With Spicy Corn",
+    "description": "[Link](https://cooking.nytimes.com/recipes/1024458-sheet-pan-chicken-thighs-with-spicy-corn)",
+    "category": "Chicken",
+    "tags": ["want to try"],
+    "text": "Yield: 4 to 6 servings \n\n2 pounds boneless, skinless chicken thighs\n1 ¾ teaspoons fine sea or table salt\n2 tablespoons mayonnaise\n¼ cup finely chopped basil, plus more for garnish\n2 garlic cloves, finely grated or minced\n⅓ cup chopped pickled jalapeños, plus brine from the jar\n4 cups fresh or frozen corn kernels (from about 4 ears)\n3 tablespoons olive oil, plus more for drizzling\n5 scallions, thinly sliced\n1 jalapeño, sliced into rings\n1 lime, halved\n\nSeason the chicken all over with ¾ teaspoon of salt. In a large bowl, stir together the mayonnaise, basil, garlic and 2 tablespoons jalapeño brine. Add the chicken to the marinade. Cover and refrigerate for 30 minutes and up to 6 hours.\n\nHeat oven to 425 degrees. In a medium bowl, toss together corn, pickled jalapeños, olive oil, remaining 1 teaspoon salt and half of the scallions (save remaining scallions for serving).\n\nArrange the chicken on a baking sheet, spacing it out. Roast for 12 minutes. Spoon the corn mixture onto the empty parts of the baking sheet. Drizzle chicken and corn with oil. Continue to roast until the chicken is cooked through, 10 to 15 minutes longer, stirring the corn once while roasting.\n\nTurn the broiler on high and broil the chicken and corn until golden brown in spots, 2 to 4 minutes (watch carefully so it doesn't burn, though a little blistering is nice).\n\nGarnish chicken and corn with basil, remaining scallions and fresh jalapeño slices. Sprinkle with more pickled jalapeño brine and squeeze with lime juice. Serve hot or at room temperature." 
+  },
+  {
+    "title": "Skillet Chicken With Peppers and Tomatoes",
+    "description": "[Link](https://cooking.nytimes.com/recipes/1024608-skillet-chicken-with-peppers-and-tomatoes)",
+    "category": "Chicken",
+    "tags": ["want to try"],
+    "text": "Yield: 4 Servings\n\n2 pounds skin-on, bone-in chicken thighs (4 to 8 thighs)\nSalt\n2 tablespoons extra virgin olive oil, plus more for drizzling\n1 small onion, diced\n2 medium bell peppers (any color or a mix of colors), diced\n5 garlic cloves, smashed and peeled\n½ to ¾ teaspoon red-pepper flakes\n¼ cup sherry vinegar\n1 tablespoon honey\n1 pint cherry tomatoes\n¼ cup chopped fresh basil or parsley (optional)\n\nPat the chicken dry and season generously with salt.\n\nHeat 1 tablespoon oil in a large skillet over medium. Add the onions and cook, stirring frequently until just starting to soften, 2 minutes. Add the peppers and cook until just beginning to soften, 1 minute. Add the garlic and red-pepper flakes and season lightly with salt. Cook, stirring, until the garlic is fragrant and the onions are beginning to brown slightly, 2 minutes. Move the cooked vegetables to a plate.\n\nAdd 1 tablespoon oil to the skillet. Place the chicken skin-side down and sear without moving until the skin is golden brown, 6 to 10 minutes. Turn and cook the other side until lightly browned, about 3 minutes. Pour out all but 1 tablespoon fat from the pan.\n\nAdd ½ cup water to the skillet and stir and scrape to loosen any stuck bits. Stir in the sherry vinegar and honey. Cover with a lid or foil, turn the heat down to medium-low and cook until the meat is cooked through, about 8 minutes. Uncover, raise the heat to medium-high and cook until the sauce is thickened, 2 to 3 minutes.\n\nAdd the cherry tomatoes and cook until they begin to soften and burst, 3 to 4 minutes, smashing open if needed. Return the onion-pepper mixture to the skillet, stir to coat in the pan sauce and cook, uncovered, until warmed through. Taste and add more salt if needed and remove from heat. Drizzle more olive oil over the top and garnish with a shower of basil or parsley, if using."
+  },
+  {
     "title": "Black Pepper Beef and Cabbage Stir-Fry",
     "description": "[Link](https://cooking.nytimes.com/recipes/1020506-black-pepper-beef-and-cabbage-stir-fry)",
     "category": "Beef",
@@ -368,7 +382,7 @@
     "category": "Soup",
     "time": "",
     "tags": ["chinese","mom"],
-    "text": "•Water, rice, pidan, marinated pork (opt.), salt, white pepper\n\n• Add water and white rice, e.g. 1/2 cup rice and 2 cups water. Note that the rice will expand as it cooks.\n• Boil and let simmer until the rice has expanded. If desired, you can whisk the rice to create a smoother texture.\n• If desired, can add marinated pork that has been cut into very small pieces.\n• Add salt, hújiāofěn (white pepper).\n• Peel 1 or 2 pídàn and add to pot (can roughly slice beforehand, or slice inside the pot).",
+    "text": "•Water, rice, pidan, marinated pork (opt.), salt, white pepper\n\n• Add water and white rice, e.g. 1/2 cup rice and 3 1/2 cups water. Note that the rice will expand as it cooks.\n• Heat until it comes to a rolling boil, mixing often to prevent the rice from sticking to the bottom of the pot. Lower heat and let simmer until the rice has expanded and soaked up the water. If desired, you can whisk the rice to create a smoother texture.\n• If desired, can add marinated pork that has been cut into very small pieces.\n• Add salt, hújiāofěn (white pepper).\n• Peel 1 or 2 pídàn and add to pot (can roughly slice beforehand, or slice inside the pot).",
     "image": "/data/img/pidan-zhou.jpeg"
   },
   {
