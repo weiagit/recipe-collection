@@ -1,5 +1,13 @@
 [
   {
+    "title": "Pancakes",
+    "description": "[Link](https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/?print=)",
+    "category": "Dessert",
+    "tags": ["amy"],
+    "text": "Ingredients\n1 ½ cups all-purpose flour\n3 ½ teaspoons baking powder\n1 tablespoon white sugar\n¼ teaspoon salt, or more to taste\n1 ¼ cups milk\n3 tablespoons butter, melted\n1 large egg\n\nDirections\nGather all ingredients.\n\nSift flour, baking powder, sugar, and salt together in a large bowl. Make a well in the center and add milk, melted butter, and egg; mix until smooth.\n\nHeat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes.\n\nFlip and cook until browned on the other side. Repeat with remaining batter.\n\nServe and enjoy!\n", 
+    "image": "/data/img/pancake.jpeg"
+  },
+  {
     "title": "Belgian Waffles",
     "description": "[Link](https://thesaltymarshmallow.com/wprm_print/homemade-belgian-waffle-recipe)",
     "category": "Dessert",
