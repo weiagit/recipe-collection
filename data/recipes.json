@@ -1,5 +1,27 @@
 [
   {
+    "title": "Air Fryer Hard-Boiled Eggs",
+    "description":"",
+    "category": "Egg",
+    "tags": [],
+    "text": "Air fry about 7 eggs at 365F for 6 minutes for soft-boiled, or maybe 8 minutes for hard-boiled. When done, remove from air fryer and put eggs in a bowl of cold water."
+  },
+  {
+    "title": "Chicken Fried Rice",
+    "description":"[Link](https://cooking.nytimes.com/recipes/1023897-chicken-fried-rice)", 
+    "category": "Chicken",
+    "tags": [],
+    "text": "1 pound ground chicken or turkey, preferably dark meat\n2 tablespoons soy sauce, plus more to taste\n4 garlic cloves, finely chopped\n1 (3-inch) piece of fresh ginger, peeled and finely chopped\n1 to 1 ½ teaspoons red-pepper flakes, chile sauce or chopped fresh chile (optional)\n3 tablespoons neutral oil, plus more as needed\n1 bunch scallions, trimmed and thinly sliced, dark green parts separated\n4 cups cooked, long-grain white or brown rice, preferably day-old (or 1 ⅓ cups uncooked rice; see Tip)\n½ cup frozen peas (about 2 ½ ounces; no need to thaw)\nSalt\n2 large eggs, beaten with a pinch of salt\nAny combination of chile sauce, rice or black vinegar, toasted sesame oil, white pepper, cilantro and MSG (optional, for serving)\n\nStep 1\nIn a medium bowl, use your hands or two forks to mix together the ground chicken, 1 tablespoon soy sauce, half the garlic, half the ginger, and the red-pepper flakes (if using).\n\nStep 2\nHeat your largest nonstick or cast-iron skillet over medium-high until very hot. Add 1 tablespoon of the oil and the ground chicken, then use a wooden spoon or heatproof spatula to quickly press meat into a thin layer (like one giant smash burger). Cook, undisturbed, until meat is browned underneath, 3 to 5 minutes. Break up meat into bite-size pieces and stir until cooked through, 1 to 2 minutes. Turn off the heat, then transfer the chicken to a clean bowl, leaving the juices and fat in the skillet.\n\nStep 3\nAdd the remaining 2 tablespoons oil, the scallion whites and the remaining ginger and garlic to the skillet. Raise heat to medium-high, scrape up browned bits on the skillet and stir until sizzling and light golden, 1 to 2 minutes. Add the rice, peas, the remaining 1 tablespoon of soy sauce and salt to taste. Stir to coat in the oil and break up clumps of rice. Spread out the rice along the sides and bottom of the skillet. Cook, undisturbed, until the sound shifts from a sizzle to a crackle and the rice is golden at the edges, 3 to 5 minutes. If the rice is burning, add more oil.\n\nStep 4\nPour the eggs in a thin stream over the rice. When you see some of the egg start to set, 15 to 30 seconds, toss the rice constantly to break up and cook the eggs. Add the chicken and toss to warm through, 1 minute. Turn off the heat and stir in the scallion greens. Serve with more soy sauce and other seasonings as you like.\n\nTip\nLeftover, cooked rice from the fridge has less moisture, so it will crisp more easily. If you’re starting with uncooked rice, cook it as you would pasta so that the grains are not clumped together: Bring a large pot of salted water to a boil. Add 1⅓ cups rice and cook until just cooked through, 10 to 12 minutes for white rice and 25 to 30 minutes for brown rice. Drain, run under cold water to cool, shake to get rid of any water, then spread out on a baking sheet and refrigerate until Step 4." 
+  },
+  {
+    "title": "Pái Gǔ (ribs)",
+    "description":"", 
+    "category": "Pork",
+    "tags": ["mom","chinese"],
+    "text": "\nAbout 5 pork ribs\nDry rub:\n7 spoon brown sugar, 1 spoon BBQ sauce powder, 2 spoon salt, 2 spoon roasted garlic and herb seasoning\nLiquid seasonings:\n1 spoon cooking wine, 1 spoon soy sauce, 1 spoon dark soy sauce, 1 spoon vinegar, 1 spoon honey\n\nRinse meat. Place ribs on aluminum foil. Cover front and back of ribs with dry rub, adding a decently generous amount.\nSpoon liquid seasonings on the top side and a bit on the sides of the ribs.\nFold up the sides of the aluminum foil and wrap like an envelope. Place on lined baking sheets.\nBake at 375°F for 1 hr, or for 1 hr 30 min (to be on the safe side)",
+    "image": "/data/img/paigu.jpeg"
+  },
+  {
     "title": "Pancakes",
     "description": "[Link](https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/?print=)",
     "category": "Dessert",
